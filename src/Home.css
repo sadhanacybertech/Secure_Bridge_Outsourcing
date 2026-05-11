@@ -1,0 +1,298 @@
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 100px 0;
+  background:
+    linear-gradient(
+      rgba(4, 17, 39, 0.82),
+      rgba(4, 17, 39, 0.82)
+    ),
+    url("./images/outsourcing-hero-img.webp")
+    center/cover no-repeat;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(13, 110, 253, 0.25),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(59, 130, 246, 0.2),
+      transparent 35%
+    );
+
+  z-index: 1;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 980px;
+  margin: auto;
+  text-align: center;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.hero-title {
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -3px;
+  margin-bottom: 30px;
+  font-family: "Inter", sans-serif;
+
+}
+
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+  max-width: 820px;
+  margin: auto auto 45px;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  height: 60px;
+
+  padding: 0 34px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: 0.35s ease;
+
+  cursor: pointer;
+}
+
+/* PRIMARY BUTTON */
+
+.primary-btn {
+  background:
+    linear-gradient(
+      135deg,
+      #0d6efd,
+      #3b82f6
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 18px 40px rgba(13, 110, 253, 0.35);
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+}
+
+/* SECONDARY BUTTON */
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  color: #ffffff;
+
+  backdrop-filter: blur(12px);
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+
+  transform: translateY(-4px);
+}
+
+/* =========================
+   BLUR EFFECTS
+========================= */
+
+.hero-blur {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  z-index: 1;
+}
+
+.blur-one {
+  width: 300px;
+  height: 300px;
+
+  background: rgba(13, 110, 253, 0.28);
+
+  top: -80px;
+  left: -80px;
+}
+
+.blur-two {
+  width: 280px;
+  height: 280px;
+
+  background: rgba(59, 130, 246, 0.25);
+
+  right: -80px;
+  bottom: -80px;
+}
+
+/* =========================
+   LARGE DEVICES
+========================= */
+
+@media (max-width: 1199px) {
+
+  .hero-title {
+    font-size: 68px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+  .hero-section {
+    min-height: auto;
+
+    padding: 140px 0 110px;
+  }
+
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.12;
+  }
+
+  .hero-description {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+  .hero-section {
+    padding: 130px 0 90px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 22px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+
+    margin-bottom: 35px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+
+  .hero-badge {
+    font-size: 13px;
+    padding: 10px 18px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .hero-title {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .hero-btn {
+    height: 54px;
+
+    font-size: 15px;
+
+    border-radius: 14px;
+  }
+}
