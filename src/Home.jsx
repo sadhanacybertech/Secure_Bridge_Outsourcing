@@ -37,9 +37,8 @@ const Home = () => {
               <FaArrowRight />
             </button>
 
-            <button className="hero-btn secondary-btn">
-              Explore Services
-            </button>
+          
+        
 
           </div>
 
