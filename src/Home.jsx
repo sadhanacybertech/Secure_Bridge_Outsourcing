@@ -217,7 +217,7 @@ const Home = () => {
 
             <div className="sb-hero-buttons">
               <button className="sb-primary-btn">
-                Get Started
+                Get Verified Leads
                 <FaArrowRight />
               </button>
 
