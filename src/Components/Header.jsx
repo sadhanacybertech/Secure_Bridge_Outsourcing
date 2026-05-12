@@ -64,7 +64,7 @@ const Header = () => {
 
                         <Nav.Link
                             as={Link}
-                            to="/aboutus"
+                            to="/about"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
@@ -115,7 +115,7 @@ const Header = () => {
                             className="contact-btn"
                             onClick={() => setExpanded(false)}
                         >
-                            Get Started
+                            Get Verified Leads
                         </Button>
                     </div>
 
