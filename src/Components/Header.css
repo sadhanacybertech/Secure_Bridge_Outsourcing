@@ -173,7 +173,7 @@
 
   .nav-link-custom {
     width: 100%;
-    padding: 12px 0 !important;
+    padding: 5px 0 !important;
   }
 
   .nav-link-custom::after {
@@ -214,5 +214,36 @@
   .contact-btn {
     padding: 11px 20px !important;
     font-size: 14px !important;
+  }
+}
+
+/* NAVBAR COLLAPSE */
+
+.custom-navbar .navbar-collapse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* CENTER MENU */
+
+.navbar-menu {
+  gap: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 991px) {
+
+  .custom-navbar .navbar-collapse {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-menu {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
   }
 }

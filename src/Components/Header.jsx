@@ -50,7 +50,8 @@ const Header = () => {
                 {/* MENU */}
                 <Navbar.Collapse id="basic-navbar-nav">
 
-                    <Nav className="ms-auto align-items-lg-center navbar-menu">
+                    {/* CENTER MENU */}
+                    <Nav className="mx-auto align-items-lg-center navbar-menu">
 
                         <Nav.Link
                             as={Link}
@@ -63,11 +64,11 @@ const Header = () => {
 
                         <Nav.Link
                             as={Link}
-                            to="/verticals"
+                            to="/aboutus"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
-                            Verticals
+                            About Us
                         </Nav.Link>
 
                         <Nav.Link
@@ -81,20 +82,20 @@ const Header = () => {
 
                         <Nav.Link
                             as={Link}
-                            to="/brands"
+                            to="/products"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
-                            Brands
+                            Products
                         </Nav.Link>
 
                         <Nav.Link
                             as={Link}
-                            to="/about"
+                            to="/faqs"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
-                            About Us
+                          FAQ's
                         </Nav.Link>
 
                         <Nav.Link
@@ -103,18 +104,20 @@ const Header = () => {
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
-                            Careers
+                            Contact
                         </Nav.Link>
 
-                        {/* BUTTON */}
+                    </Nav>
+
+                    {/* RIGHT SIDE BUTTON */}
+                    <div className="d-flex justify-content-lg-end justify-content-center mt-4 mt-lg-0">
                         <Button
                             className="contact-btn"
                             onClick={() => setExpanded(false)}
                         >
-                            Contact Us
+                            Get Started
                         </Button>
-
-                    </Nav>
+                    </div>
 
                 </Navbar.Collapse>
 
