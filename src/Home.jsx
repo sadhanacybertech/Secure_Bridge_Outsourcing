@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { FaArrowRight, FaChartLine, FaCheckCircle, FaClipboardCheck, FaClock, FaEnvelope, FaHandshake, FaHeadset, FaMapMarkerAlt, FaPaperPlane, FaPhoneAlt, FaRocket, FaSearch, FaShieldAlt, FaUserFriends, FaUsers } from "react-icons/fa";
+import React, { useEffect, useRef, useState } from "react";
+import { FaArrowLeft, FaArrowRight, FaChartLine, FaCheckCircle, FaClipboardCheck, FaClock, FaEnvelope, FaHandshake, FaHeadset, FaMapMarkerAlt, FaPaperPlane, FaPhoneAlt, FaRocket, FaSearch, FaShieldAlt, FaUserFriends, FaUsers } from "react-icons/fa";
 import "./Home.css";
 import { FiChevronDown } from "react-icons/fi";
-
+import heroImg from "./images/lead.jpeg";
 const Home = () => {
 
   const slides = [
@@ -150,7 +150,47 @@ const Home = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  const sliderRef = useRef(null);
 
+  const scrollLeft = () => {
+    sliderRef.current.scrollBy({
+      left: -420,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    sliderRef.current.scrollBy({
+      left: 420,
+      behavior: "smooth",
+    });
+  };
+
+  const services = [
+    {
+      img: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+      title: "Lead Generation Services",
+      desc: "We provide verified B2B leads and targeted outreach campaigns that help businesses boost conversions and sales growth.",
+    },
+
+    {
+      img: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?q=80&w=1200&auto=format&fit=crop",
+      title: "Webinar Audience Acquisition",
+      desc: "Generate qualified webinar attendees and event audiences through strategic marketing and engagement solutions.",
+    },
+
+    {
+      img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
+      title: "Account Based Marketing",
+      desc: "Reach high-value accounts with personalized ABM campaigns designed for better engagement and ROI.",
+    },
+
+    {
+      img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+      title: "Demand Generation",
+      desc: "Build awareness and generate quality demand through data-driven multi-channel marketing campaigns.",
+    },
+  ];
 
   return (
     <>
@@ -209,7 +249,7 @@ const Home = () => {
           <div className="sb-hero-image">
             <div className="sb-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+                src={heroImg}
                 alt="Secure Bridge Outsourcing"
               />
 
@@ -232,91 +272,106 @@ const Home = () => {
 
 
 
+  <section className="sb-services-section">
 
-      <section
-        className="sb-cta"
-        style={{
-          backgroundImage: `url(${slides[currentSlide].image})`,
-        }}
-      >
-        {/* OVERLAY */}
-        <div className="sb-cta-overlay"></div>
-        <div className="sb-cta-container">
-          <div className="sb-cta-content">
+      <div className="container">
 
-            {/* TITLE */}
+        {/* TOP */}
 
-            <h1
-              key={currentSlide}
-              className="sb-cta-title fade-up"
-            >
-              {slides[currentSlide].title}
-            </h1>
+        <div className="sb-services-top text-center">
+          <h2>
+            Our Premium
+            <span> Services</span>
+          </h2>
 
-            {/* DESCRIPTION */}
+          <p>
+            Secure Bridge Outsourcing delivers scalable business
+            solutions that help companies grow faster and smarter.
+          </p>
 
-            <p
-              key={`desc-${currentSlide}`}
-              className="sb-cta-desc fade-up"
-            >
-              {slides[currentSlide].desc}
-            </p>
-
-            {/* BUTTONS */}
-
-            <div className="sb-cta-buttons">
-              <button className="sb-cta-primary">
-                Get Free Consultation
-                <FaArrowRight />
-              </button>
-
-              <button className="sb-cta-secondary">
-                Explore Services
-              </button>
-            </div>
-
-            {/* STATS */}
-
-            <div className="sb-cta-stats">
-              <div className="sb-cta-stat">
-                <div>
-                  <h3 className="fw-bold">500+</h3>
-                  <p>Global Clients</p>
-                </div>
-              </div>
-
-              <div className="sb-cta-stat">
-                <div>
-                  <h3 className="fw-bold">95%</h3>
-                  <p>Success Rate</p>
-                </div>
-              </div>
-
-              <div className="sb-cta-stat">
-                <div>
-                  <h3 className="fw-bold">24/7</h3>
-                  <p>Business Support</p>
-                </div>
-              </div>
-            </div>
-
-            {/* SLIDER DOTS */}
-
-            <div className="sb-slider-dots m-auto">
-              {slides.map((_, index) => (
-                <span
-                  key={index}
-                  className={
-                    currentSlide === index ? "active" : ""
-                  }
-                  onClick={() => setCurrentSlide(index)}
-                ></span>
-              ))}
-            </div>
-          </div>
         </div>
-      </section>
 
+        {/* SLIDER */}
+
+        <div className="sb-services-slider-wrapper">
+
+          {/* LEFT BTN */}
+
+          <button
+            className="sb-slider-btn left"
+            onClick={scrollLeft}
+          >
+            <FaArrowLeft />
+          </button>
+
+          {/* SLIDER */}
+
+          <div
+            className="sb-services-slider"
+            ref={sliderRef}
+          >
+
+            {services.map((item, index) => (
+
+              <div
+                className="sb-service-card"
+                key={index}
+              >
+
+                {/* IMAGE */}
+
+                <div className="sb-service-image">
+
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                  />
+
+                </div>
+
+                {/* CONTENT */}
+
+                <div className="sb-service-content">
+                  <h3>
+                    {item.title}
+                  </h3>
+
+                  <p>
+                    {item.desc}
+                  </p>
+
+                  {/* BUTTON */}
+
+                  <button className="sb-learn-btn">
+
+                    Learn More
+
+                    <span>→</span>
+
+                  </button>
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+          {/* RIGHT BTN */}
+
+          <button
+            className="sb-slider-btn right"
+            onClick={scrollRight}
+          >
+            <FaArrowRight />
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
       <section className="sb-steps">

@@ -6,10 +6,15 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaArrowRight,
+  FaYoutube,
+  FaLinkedinIn,
+  FaInstagram,
+  FaFacebookF,
 } from "react-icons/fa";
 
 import "./Footer.css";
 import { IoIosArrowForward } from "react-icons/io";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -20,9 +25,11 @@ const Footer = () => {
         <div className="row g-5">
 
           {/* LEFT SIDE */}
+
           <div className="col-lg-4 col-md-6">
 
             <div className="footer-logo">
+
               <span className="footer-logo-blue">
                 Secure
               </span>
@@ -30,6 +37,7 @@ const Footer = () => {
               <span className="footer-logo-dark">
                 Bridge
               </span>
+
             </div>
 
             <p className="footer-desc">
@@ -38,6 +46,40 @@ const Footer = () => {
               and scalable business support to help your
               company grow faster and smarter.
             </p>
+
+            {/* SOCIAL ICONS */}
+
+            <div className="footer-socials">
+              <h6>Follow Us : </h6> 
+              <a
+                href="/"
+                className="footer-social facebook"
+              >
+                <FaFacebookF />
+              </a>
+
+              <a
+                href="/"
+                className="footer-social instagram"
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                href="/"
+                className="footer-social linkedin"
+              >
+                <FaLinkedinIn />
+              </a>
+
+              <a
+                href="/"
+                className="footer-social twitter"
+              >
+                <FaXTwitter />
+              </a>
+
+            </div>
 
           </div>
 
@@ -59,7 +101,7 @@ const Footer = () => {
                 <FaEnvelope className="footer-contact-icon" />
                 <span>securebridgepvtltd@gmail.com</span>
               </li>
-              
+
               <li>
                 <FaMapMarkerAlt className="footer-contact-icon" />
                 <span>B -17 ,Second Floor Sector -59 Noida</span>
@@ -80,35 +122,35 @@ const Footer = () => {
 
               <li>
                 <Link to="/">
-                <IoIosArrowForward />
+                  <IoIosArrowForward />
                   Home
                 </Link>
               </li>
 
               <li>
                 <Link to="/services">
-                <IoIosArrowForward />
+                  <IoIosArrowForward />
                   Services
                 </Link>
               </li>
 
               <li>
                 <Link to="/about">
-                <IoIosArrowForward />
+                  <IoIosArrowForward />
                   About Us
                 </Link>
               </li>
 
               <li>
                 <Link to="/careers">
-                <IoIosArrowForward />
+                  <IoIosArrowForward />
                   Careers
                 </Link>
               </li>
 
               <li>
                 <Link to="/contact">
-                <IoIosArrowForward />
+                  <IoIosArrowForward />
                   Contact
                 </Link>
               </li>
@@ -128,21 +170,21 @@ const Footer = () => {
 
               <li>
                 <Link to="/privacy-policy">
-                <IoIosArrowForward />
+                  <IoIosArrowForward />
                   Privacy Policy
                 </Link>
               </li>
 
               <li>
                 <Link to="/terms">
-                <IoIosArrowForward />
+                  <IoIosArrowForward />
                   Terms & Conditions
                 </Link>
               </li>
 
               <li>
                 <Link to="/refund-policy">
-                <IoIosArrowForward />
+                  <IoIosArrowForward />
                   Refund Policy
                 </Link>
               </li>
