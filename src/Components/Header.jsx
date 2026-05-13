@@ -51,7 +51,7 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
 
                     {/* CENTER MENU */}
-                    <Nav className="mx-auto align-items-lg-center navbar-menu">
+                    <Nav className="ms-auto align-items-lg-center navbar-menu">
 
                         <Nav.Link
                             as={Link}
@@ -64,11 +64,11 @@ const Header = () => {
 
                         <Nav.Link
                             as={Link}
-                            to="/about"
+                            to="/verticals"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
-                            About Us
+                            Verticals
                         </Nav.Link>
 
                         <Nav.Link
@@ -86,16 +86,16 @@ const Header = () => {
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
-                            Products
+                            Brands
                         </Nav.Link>
 
                         <Nav.Link
                             as={Link}
-                            to="/faqs"
+                            to="/about"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
-                          FAQ's
+                          About Us 
                         </Nav.Link>
 
                         <Nav.Link
@@ -104,7 +104,7 @@ const Header = () => {
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
-                            Contact
+                            Careers
                         </Nav.Link>
 
                     </Nav>

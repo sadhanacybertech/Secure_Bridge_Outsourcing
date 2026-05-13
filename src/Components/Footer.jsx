@@ -50,7 +50,7 @@ const Footer = () => {
             {/* SOCIAL ICONS */}
 
             <div className="footer-socials">
-              <h6>Follow Us : </h6> 
+              <h6>Follow Us On : </h6> 
               <a
                 href="/"
                 className="footer-social facebook"
