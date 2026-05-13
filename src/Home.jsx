@@ -6,6 +6,8 @@ import heroImg from "./images/lead.jpeg";
 import { IoDiscSharp, IoStarHalf } from "react-icons/io5";
 import { HashLink } from "react-router-hash-link";
 import { IoIosDisc } from "react-icons/io";
+import ppcImg from "./images/ppc.jpeg";
+import aboutImg from "./images/about.jpeg";
 const Home = () => {
 
   const slides = [
@@ -98,51 +100,51 @@ const Home = () => {
 
   const faqData = [
     {
-      question: "Is Secure Bridge Outsourcing suitable for startups?",
+      question: "What types of leads do you provide?",
       answer:
-        "Yes, our outsourcing solutions are designed for startups, SMEs, and enterprises looking to scale operations efficiently.",
+        "We provide high-quality leads across multiple industries, including Medicare, ACA, and other targeted business verticals.",
     },
 
     {
-      question: "What services does Secure Bridge Outsourcing provide?",
+      question: "Are your leads verified and high-quality?",
       answer:
-        "We provide customer support, lead generation, IT outsourcing, back-office management, and business process solutions.",
+        "Yes, we focus on delivering verified and quality-driven leads to help businesses improve conversions and growth.",
     },
 
     {
-      question: "Do you provide 24/7 support services?",
+      question: "Which industries are you specialized in?",
       answer:
-        "Absolutely. Our dedicated teams are available round the clock to ensure uninterrupted business operations.",
+        "We specialize in lead generation and outsourcing solutions for Medicare, ACA, customer support, and multiple business industries.",
     },
 
     {
-      question: "How secure are your outsourcing solutions?",
+      question: "Do you provide Medicare and ACA lead services?",
       answer:
-        "We follow secure workflows and confidentiality practices to keep your business data protected and reliable.",
+        "Yes, we offer reliable Medicare and ACA lead generation solutions tailored to business requirements.",
+    },
+
+    {
+      question: "What outsourcing services do you offer?",
+      answer:
+        "We provide customer support, back-office support, business process outsourcing, and operational assistance services.",
     },
 
     {
       question: "Can your services scale with my business?",
       answer:
-        "Yes, our services are flexible and scalable according to your business growth requirements.",
+        "Yes, our solutions are designed to support businesses of all sizes and scale according to growth requirements.",
     },
 
     {
       question: "How quickly can we get started?",
       answer:
-        "After consultation and requirement analysis, onboarding can begin within a few business days.",
+        "Our team ensures a smooth onboarding process so businesses can get started quickly and efficiently.",
     },
 
     {
-      question: "Do you provide dedicated account managers?",
+      question: "Do you provide 24/7 business support?",
       answer:
-        "Yes, each client gets a dedicated manager for smooth communication and project handling.",
-    },
-
-    {
-      question: "Which industries do you work with?",
-      answer:
-        "We work with eCommerce, healthcare, real estate, education, IT, and many other industries.",
+        "Yes, we provide reliable support services to ensure smooth business operations and client assistance.",
     },
   ];
 
@@ -291,8 +293,7 @@ const Home = () => {
 
     {
       id: 7,
-      image:
-        "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
+      image:ppcImg,
 
 
       title: "Pay Per Call",
@@ -360,7 +361,7 @@ const Home = () => {
               </a>
 
               <HashLink
-                smooth
+                smooth="true"
                 to="/#verticals"
                 className="sb-secondary-btn text-decoration-none"
               >
@@ -971,20 +972,17 @@ const Home = () => {
                 <div className="about-company-image">
 
                   <img
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+                    src={aboutImg}
                     alt="Company"
                   />
 
                 </div>
-
-                {/* FLOATING CARD */}
-
                 <div className="about-company-floating-card">
 
-                  <h3>10+</h3>
+                  <h3>24/7</h3>
 
                   <p>
-                    Years Of Industry Experience
+                    Customer Support Services
                   </p>
 
                 </div>
@@ -1060,15 +1058,15 @@ const Home = () => {
 
           <div className="sb-contact-top text-center">
             <h2>
-              Ready To  
+              Ready To
               <span> Scale Your Business </span>
               With Quality Leads?
             </h2>
 
             <p>
-              Looking for high-quality leads and reliable outsourcing solutions? 
-              Connect with Secure Bridge Outsourcing to discuss Medicare, ACA, 
-              pay-per-call, and customer acquisition services tailored for your 
+              Looking for high-quality leads and reliable outsourcing solutions?
+              Connect with Secure Bridge Outsourcing to discuss Medicare, ACA,
+              pay-per-call, and customer acquisition services tailored for your
               business growth.
 
             </p>
@@ -1347,7 +1345,7 @@ const Home = () => {
 
 
 
-      
+
 
 
     </>
