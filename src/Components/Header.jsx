@@ -95,7 +95,7 @@ const Header = () => {
                             About Us
                         </Nav.Link>
 
-                       
+
 
                         <Nav.Link
                             as={HashLink}
@@ -108,7 +108,7 @@ const Header = () => {
                         </Nav.Link>
 
 
-                         <Nav.Link
+                        <Nav.Link
                             as={HashLink}
                             smooth
                             to="/#faq"
@@ -123,12 +123,21 @@ const Header = () => {
 
                     {/* RIGHT SIDE BUTTON */}
                     <div className="d-flex justify-content-lg-end justify-content-center mt-4 mt-lg-0">
-                        <Button
-                            className="contact-btn"
-                            onClick={() => setExpanded(false)}
+                        <a
+                            href="https://wa.me/919873251672"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-decoration-none"
                         >
-                            Get Verified Leads
-                        </Button>
+
+                            <Button
+                                className="contact-btn"
+                                onClick={() => setExpanded(false)}
+                            >
+                                Get Verified Leads
+                            </Button>
+
+                        </a>
                     </div>
 
                 </Navbar.Collapse>
