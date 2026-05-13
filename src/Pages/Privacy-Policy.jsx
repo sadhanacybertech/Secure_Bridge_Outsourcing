@@ -179,7 +179,7 @@ const PrivacyPolicy = () => {
 
           {/* UPDATES */}
 
-          <div className="privacy-item last-item">
+          <div className="terms-item last-item">
 
             <h3>
               Updates
