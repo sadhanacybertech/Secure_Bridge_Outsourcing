@@ -7,7 +7,7 @@ import { IoDiscSharp, IoStarHalf } from "react-icons/io5";
 import { HashLink } from "react-router-hash-link";
 import { IoIosDisc } from "react-icons/io";
 import ppcImg from "./images/ppc.jpeg";
-import aboutImg from "./images/about.jpeg";
+import aboutImg from "./images/About.jpeg";
 const Home = () => {
 
   const slides = [
