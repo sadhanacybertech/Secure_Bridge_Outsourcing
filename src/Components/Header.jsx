@@ -65,15 +65,7 @@ const Header = () => {
                             Home
                         </Nav.Link>
 
-                        <Nav.Link
-                            as={HashLink}
-                            smooth
-                            to="/#verticals"
-                            className="nav-link-custom"
-                            onClick={() => setExpanded(false)}
-                        >
-                            Our Verticals
-                        </Nav.Link>
+
 
                         <Nav.Link
                             as={HashLink}
@@ -83,6 +75,16 @@ const Header = () => {
                             onClick={() => setExpanded(false)}
                         >
                             Services
+                        </Nav.Link>
+
+                        <Nav.Link
+                            as={HashLink}
+                            smooth
+                            to="/#verticals"
+                            className="nav-link-custom"
+                            onClick={() => setExpanded(false)}
+                        >
+                            Our Verticals
                         </Nav.Link>
 
                         <Nav.Link

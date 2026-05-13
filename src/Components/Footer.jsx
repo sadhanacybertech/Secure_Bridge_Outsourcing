@@ -51,9 +51,10 @@ const Footer = () => {
             {/* SOCIAL ICONS */}
 
             <div className="footer-socials">
-              <h6>Follow Us On : </h6>
+              <strong className="fw-bold">Follow Us On : </strong>
               <a
                 href="/"
+                aria-label="Visit our Facebook page"
                 className="footer-social facebook"
               >
                 <FaFacebookF />
@@ -61,6 +62,7 @@ const Footer = () => {
 
               <a
                 href="/"
+                aria-label="Visit our Instagram page"
                 className="footer-social instagram"
               >
                 <FaInstagram />
@@ -68,6 +70,7 @@ const Footer = () => {
 
               <a
                 href="/"
+                aria-label="Visit our LinkedIn page"
                 className="footer-social linkedin"
               >
                 <FaLinkedinIn />
@@ -75,11 +78,11 @@ const Footer = () => {
 
               <a
                 href="/"
+                aria-label="Visit our Twitter page"
                 className="footer-social twitter"
               >
                 <FaXTwitter />
               </a>
-
             </div>
 
           </div>
@@ -87,9 +90,9 @@ const Footer = () => {
           {/* CONTACT */}
           <div className="col-lg-3 col-md-6">
 
-            <h4 className="footer-title">
+            <strong className="footer-title fs-4">
               Contact
-            </h4>
+            </strong>
 
             <ul className="footer-contact">
 
@@ -115,9 +118,9 @@ const Footer = () => {
           {/* QUICK LINKS */}
           <div className="col-lg-2 col-md-6">
 
-            <h4 className="footer-title">
+            <strong className="footer-title fs-4">
               Quick Links
-            </h4>
+            </strong>
 
             <ul className="footer-links">
 
@@ -175,9 +178,9 @@ const Footer = () => {
           {/* POLICIES */}
           <div className="col-lg-3 col-md-6">
 
-            <h4 className="footer-title">
+            <strong className="footer-title fs-4">
               Policies
-            </h4>
+            </strong>
 
             <ul className="footer-links">
 

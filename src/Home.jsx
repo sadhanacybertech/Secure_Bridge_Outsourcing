@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FaArrowLeft, FaArrowRight, FaBriefcase, FaBullseye, FaChartLine, FaCheckCircle, FaClipboardCheck, FaClock, FaEnvelope, FaHandshake, FaHeadset, FaHeartbeat, FaHospital, FaMapMarkerAlt, FaPaperPlane, FaPhoneAlt, FaPhoneVolume, FaRocket, FaSearch, FaShieldAlt, FaUserFriends, FaUsers, FaUserShield } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaBriefcase, FaBullseye, FaChartLine, FaCheckCircle, FaClipboardCheck, FaClock, FaEnvelope, FaHandshake, FaHeadset, FaHeartbeat, FaHospital, FaMapMarkerAlt, FaPaperPlane, FaPhoneAlt, FaPhoneVolume, FaRocket, FaSearch, FaShieldAlt, FaStar, FaUserFriends, FaUsers, FaUserShield } from "react-icons/fa";
 import "./Home.css";
 import { FiChevronDown } from "react-icons/fi";
 import heroImg from "./images/lead.jpeg";
-import { IoDiscSharp } from "react-icons/io5";
+import { IoDiscSharp, IoStarHalf } from "react-icons/io5";
 import { HashLink } from "react-router-hash-link";
+import { IoIosDisc } from "react-icons/io";
 const Home = () => {
 
   const slides = [
@@ -177,7 +178,7 @@ const Home = () => {
     /* MEDICARE */
 
     {
-      id: 2,
+      id: 1,
       image:
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop",
 
@@ -187,7 +188,7 @@ const Home = () => {
         "Medicare lead generation",
         "Senior customer outreach",
         "Live transfer campaigns",
-        "Policy consultation support",
+        "Eligibility verification support",
         "Scalable call center solutions",
       ],
     },
@@ -195,15 +196,15 @@ const Home = () => {
     /* ACA */
 
     {
-      id: 1,
+      id: 2,
       image:
         "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop",
 
       title: "Affordable Care Act (ACA)",
       active: true,
       points: [
-        "ACA enrollment assistance",
-        "Qualified lead generation",
+        "ACA lead generation",
+        "Qualified customer acquisition",
         "Compliance-focused campaigns",
         "Customer verification support",
         "Real-time lead delivery",
@@ -221,7 +222,7 @@ const Home = () => {
       title: "Final Expense Insurance",
 
       points: [
-        "Burial insurance support",
+        "Final expense lead generation",
         "Qualified insurance leads",
         "Customer eligibility verification",
         "Live transfer campaigns",
@@ -241,10 +242,10 @@ const Home = () => {
 
       points: [
         "Auto insurance lead generation",
-        "Policy comparison support",
+        "Qualified insurance prospects",
         "Customer quote assistance",
-        "Real-time call routing",
-        "Verified insurance prospects",
+        "Policy verification support",
+
       ],
     },
 
@@ -262,7 +263,7 @@ const Home = () => {
         "SSDI lead qualification",
         "Customer documentation support",
         "Case intake assistance",
-        "Claim consultation support",
+        "Claim verification support",
         "Customer outreach campaigns",
       ],
     },
@@ -278,10 +279,10 @@ const Home = () => {
       title: "Debt Settlement",
 
       points: [
-        "Debt relief lead generation",
-        "Customer qualification support",
-        "Financial consultation campaigns",
-        "Inbound call handling",
+        "Debt settlement lead generation",
+        "Qualified customer acquisition",
+        "Financial assistance campaigns",
+        "Inbound & outbound call support",
         "Conversion-focused outreach",
       ],
     },
@@ -300,8 +301,8 @@ const Home = () => {
         "High-intent inbound calls",
         "Real-time call routing",
         "Call tracking & analytics",
-        "ROI-driven lead delivery",
-        "Conversion-focused campaigns",
+        "ROI-focused lead delivery",
+        "Conversion-driven campaigns",
       ],
     },
 
@@ -318,9 +319,9 @@ const Home = () => {
       points: [
         "Student lead generation",
         "Course enrollment campaigns",
-        "Education counseling support",
-        "Admission inquiry handling",
+        "Admission inquiry support",
         "Verified student outreach",
+        "Education counseling assistance",
       ],
     },
   ];
@@ -360,10 +361,10 @@ const Home = () => {
 
               <HashLink
                 smooth
-                to="/#services"
+                to="/#verticals"
                 className="sb-secondary-btn text-decoration-none"
               >
-                Explore Services
+                Explore Verticals
               </HashLink>
             </div>
 
@@ -395,12 +396,12 @@ const Home = () => {
               />
 
               <div className="sb-floating-card card-1">
-                <h4>98%</h4>
+                <strong className="fw-bold fs-3">98%</strong>
                 <p>Client Satisfaction</p>
               </div>
 
               <div className="sb-floating-card card-2">
-                <h4>24/7</h4>
+                <strong className="fw-bold fs-3">24/7</strong>
                 <p>Business Support</p>
               </div>
 
@@ -413,7 +414,7 @@ const Home = () => {
 
 
       {/* OUR Services */}
-      <section className="sb-verticals-section" id="verticals">
+      <section className="sb-verticals-section" id="services">
 
         <div className="container">
 
@@ -423,17 +424,14 @@ const Home = () => {
 
             <h2>
               Our Specialized
-              <span> Services</span>
+              <span> Services & Industry Verticals</span>
             </h2>
 
             <p>
-              Secure Bridge Outsourcing offers industry-focused
-              services including ACA, Medicare campaigns,
-              Final Expense Insurance, Auto Insurance,
-              Debt Settlement, Pay Per Call, Education
-              Services, and customer acquisition solutions
-              tailored to help businesses scale efficiently
-              and achieve long-term success.
+              Secure Bridge Outsourcing offers performance-driven lead generation,
+              advertising, outsourcing, and customer acquisition solutions across multiple
+              industries including ACA, Medicare, Final Expense, Auto Insurance, Debt Settlement,
+              Pay Per Call, and Education campaigns.
             </p>
 
           </div>
@@ -447,14 +445,13 @@ const Home = () => {
             <div className="sb-vertical-title-wrap text-center">
 
               <h3>
-                Business & Healthcare Solutions
+                Our Premium Services
               </h3>
 
               <p>
-                We help businesses scale through modern
-                outsourcing services, customer engagement,
-                healthcare campaigns, and performance-driven
-                lead generation solutions.
+                We provide lead generation, outsourcing, and business
+                solutions designed to help businesses grow and scale
+                efficiently.
               </p>
 
             </div>
@@ -478,9 +475,9 @@ const Home = () => {
                   </h4>
 
                   <p>
-                    High-quality lead generation services
-                    designed to improve conversions and
-                    maximize business opportunities.
+                    We provide targeted and verified lead generation services that help
+                    businesses connect with potential customers, improve sales opportunities,
+                    and achieve higher conversion rates.
                   </p>
 
                 </div>
@@ -502,10 +499,10 @@ const Home = () => {
                   </h4>
 
                   <p>
-                    Result-driven advertising solutions designed
-                    to increase brand visibility, generate qualified
-                    leads, improve audience engagement, and maximize
-                    campaign performance across multiple industries.
+                    Our advertising solutions are designed
+                    to promote brands effectively through strategic
+                    campaigns, audience targeting, and performance-driven
+                    marketing approaches.
                   </p>
                 </div>
 
@@ -528,10 +525,10 @@ const Home = () => {
                   </h4>
 
                   <p>
-                    Scalable outsourcing solutions designed to
-                    streamline operations, improve productivity,
-                    reduce operational costs, and deliver reliable
-                    customer support with seamless business communication.
+                    We offer flexible outsourcing support
+                    that helps businesses manage operations efficiently,
+                    save time, and focus on long-term growth with reliable
+                    backend assistance.
                   </p>
                 </div>
 
@@ -551,10 +548,9 @@ const Home = () => {
                   </h4>
 
                   <p>
-                    Advanced telecommunication solutions focused on
-                    customer connectivity, inbound and outbound call
-                    support, lead engagement, and reliable communication
-                    services for business growth and customer satisfaction.
+                    Our telecommunication services focus on smooth customer communication,
+                    call support solutions, and engagement strategies that strengthen customer
+                    relationships and business performance.
                   </p>
 
                 </div>
@@ -575,7 +571,7 @@ const Home = () => {
 
       <section
         className="sb-services-section"
-        id="services"
+        id="verticals"
       >
 
         <div className="container">
@@ -585,21 +581,15 @@ const Home = () => {
           <div className="sb-services-top text-center">
 
             <h2>
-              Our Industry
-              <span>
-                {" "}Verticals
-                & Specializations
-              </span>
+              Our <span>Verticals </span>
+
             </h2>
 
             <p>
-              Secure Bridge Outsourcing delivers specialized
-              solutions across multiple industry verticals
-              including healthcare, insurance, customer support,
-              lead generation, pay-per-call, and business
-              outsourcing services designed to drive growth,
-              improve customer engagement, and maximize
-              business performance.
+              We specialize in Medicare and ACA campaigns while
+              serving multiple high-demand industries including
+              insurance, debt settlement, pay-per-call, and education
+              solutions focused on quality lead generation and business growth.
             </p>
 
           </div>
@@ -626,6 +616,11 @@ const Home = () => {
                       {/* MOST POPULAR */}
 
                       {index === 0 && (
+                        <div className="sb-popular-badge">
+                          Most Popular
+                        </div>
+                      )}
+                      {index === 1 && (
                         <div className="sb-popular-badge">
                           Most Popular
                         </div>
@@ -695,49 +690,267 @@ const Home = () => {
       </section>
 
 
-      <section className="sb-steps">
-        <div className="sb-steps-container">
 
-          {/* TOP CONTENT */}
+      {/* =========================
+    ACA SPECIALIZATION SECTION
+========================= */}
 
-          <div className="sb-steps-top">
+      <section className="aca-section">
+
+        <div className="container">
+          {/* TOP */}
+
+          <div className="aca-top text-center">
+
             <h2>
-              Transform Your Business <br />
-              <span> In 4 Smart Steps</span>
+              Specialized
+              <span> Medicare & ACA Solutions</span>
             </h2>
 
             <p>
-              We help businesses streamline operations, improve customer
-              experience, and scale faster with secure outsourcing solutions.
+              We specialize in high-quality Medicare and ACA
+              lead generation solutions designed to help
+              businesses improve customer acquisition,
+              increase conversions, and scale efficiently.
             </p>
+
           </div>
+          <div className="aca-wrapper">
 
-          {/* STEPS */}
 
-          <div className="sb-steps-wrapper">
-            {steps.map((item, index) => (
-              <div className="sb-step-card" key={index}>
 
-                <div className="sb-step-number">
-                  {item.number}
+            {/* CONTENT */}
+
+            <div className="row align-items-center g-5">
+
+              {/* LEFT */}
+
+              <div className="col-lg-6">
+
+                <div className="aca-content">
+
+                  <h3>
+                    Medicare Campaigns
+                  </h3>
+
+                  <p>
+                    Targeted Medicare lead generation
+                    solutions focused on senior outreach,
+                    customer engagement, and healthcare
+                    enrollment support services.
+                  </p>
+
+                  {/* BENEFITS */}
+
+                  <div className="aca-benefits">
+
+                    <h4>
+                      Key Benefits
+                    </h4>
+
+                    <div className="aca-benefit-list">
+
+                      <div className="aca-benefit-item">
+                        <FaStar />
+                        Qualified Medicare Leads
+                      </div>
+
+                      <div className="aca-benefit-item">
+                        <FaStar />
+                        Live Transfer Campaigns
+                      </div>
+
+                      <div className="aca-benefit-item">
+                        <FaStar />
+                        Senior Customer Outreach
+                      </div>
+
+                      <div className="aca-benefit-item">
+                        <FaStar />
+                        Real-Time Lead Delivery
+                      </div>
+
+                    </div>
+
+                  </div>
+
                 </div>
 
-                <div className="sb-step-icon">
-                  {item.icon}
-                </div>
-
-                <h3>{item.title}</h3>
-
-                <p>{item.desc}</p>
-
-                {index !== steps.length - 1 && (
-                  <div className="sb-arrow-line"></div>
-                )}
               </div>
-            ))}
+
+              {/* RIGHT */}
+
+              <div className="col-lg-5 ms-auto">
+                <div className="aca-card">
+                  <div className="aca-card-top">
+
+                    <h3>
+                      Our Specializations
+                    </h3>
+
+
+                  </div>
+
+                  {/* LIST */}
+
+                  <div className="aca-card-list">
+
+                    <div className="aca-card-item">
+                      <IoIosDisc />
+                      Medicare Enrollment Campaigns
+                    </div>
+
+                    <div className="aca-card-item">
+                      <IoIosDisc />
+                      Healthcare Lead Generation
+                    </div>
+
+                    <div className="aca-card-item">
+                      <IoIosDisc />
+                      Eligibility Verification
+                    </div>
+
+                    <div className="aca-card-item">
+                      <IoIosDisc />
+                      Compliance-Focused Outreach
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
+
       </section>
+
+
+
+      {/* =========================
+    ACA SECTION
+========================= */}
+
+      <section className="aca-health-section">
+
+        <div className="container">
+
+          <div className="aca-health-wrapper">
+
+            <div className="row align-items-center g-5">
+
+              {/* LEFT SIDE */}
+
+              <div className="col-lg-6">
+
+                <div className="aca-health-content">
+
+                  <h2>
+                    ACA
+                    <span> (Affordable Care Act)</span>
+                  </h2>
+
+                  <p>
+                    Performance-driven ACA campaigns designed for healthcare enrollment and customer acquisition.
+                  </p>
+
+                  {/* BENEFITS */}
+
+                  <div className="aca-health-benefits">
+
+                    <h4>
+                      Key Benefits :
+                    </h4>
+
+                    <div className="aca-health-grid">
+
+                      <div className="aca-health-item">
+                        <IoStarHalf />
+                        ACA enrollment support
+                      </div>
+
+                      <div className="aca-health-item">
+                        <IoStarHalf />
+                        Qualified healthcare leads
+                      </div>
+
+                      <div className="aca-health-item">
+                        <IoStarHalf />
+                        Compliance-focused campaigns
+                      </div>
+
+                      <div className="aca-health-item">
+                        <IoStarHalf />
+                        Scalable lead generation
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              {/* RIGHT SIDE */}
+
+              <div className="col-lg-5 ms-auto">
+
+                <div className="aca-health-card">
+
+                  <div className="aca-health-card-top">
+
+                    <h3>
+                      Our Specializations:
+                    </h3>
+
+                  </div>
+
+                  {/* LIST */}
+
+                  <div className="aca-health-list">
+
+                    <div className="aca-health-list-item">
+                      <FaShieldAlt />
+                      ACA enrollment campaigns
+                    </div>
+
+                    <div className="aca-health-list-item">
+                      <FaShieldAlt />
+                      Subsidy qualification leads
+                    </div>
+
+                    <div className="aca-health-list-item">
+                      <FaShieldAlt />
+                      Open enrollment promotion
+                    </div>
+
+                    <div className="aca-health-list-item">
+                      <FaShieldAlt />
+                      Customer verification support
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+
 
 
 
@@ -788,16 +1001,16 @@ const Home = () => {
 
 
                 <h2>
-                  Helping Businesses
-                  Scale Faster With
-                  Smart Outsourcing
+                  About <span>Secure Bridge Outsourcing</span>
                 </h2>
 
                 <p>
-                  Secure Bridge Outsourcing delivers reliable,
-                  scalable, and performance-driven outsourcing
-                  services that help businesses improve customer
-                  engagement, lead quality, and long-term growth.
+                  Secure Bridge Outsourcing is a performance-driven lead generation
+                  and outsourcing company focused on delivering reliable business
+                  solutions across healthcare, insurance, and customer acquisition
+                  industries. We specialize in Medicare, ACA, pay-per-call,
+                  and customer support campaigns designed to help businesses improve
+                  conversions, customer engagement, and long-term growth.
                 </p>
 
                 {/* CHECK LIST */}
@@ -806,31 +1019,26 @@ const Home = () => {
 
                   <div className="about-company-check-item">
                     <FaCheckCircle />
-                    Verified Business Solutions
+                    Verified lead generation solutions
                   </div>
 
                   <div className="about-company-check-item">
                     <FaCheckCircle />
-                    Reliable Outsourcing Services
+                    Medicare & ACA campaign expertise
                   </div>
 
                   <div className="about-company-check-item">
                     <FaCheckCircle />
-                    Dedicated Client Support
+                    Customer support & call center services
                   </div>
 
                   <div className="about-company-check-item">
                     <FaCheckCircle />
-                    Growth-Focused Strategies
+                    Scalable outsourcing solutions
                   </div>
 
                 </div>
 
-                {/* BUTTON */}
-
-                <button className="about-company-btn">
-                  Explore More
-                </button>
 
               </div>
 
@@ -852,14 +1060,17 @@ const Home = () => {
 
           <div className="sb-contact-top text-center">
             <h2>
-              Let’s Build Smarter
-              <span> Business Solutions</span>
+              Ready To  
+              <span> Scale Your Business </span>
+              With Quality Leads?
             </h2>
 
             <p>
-              Ready to scale your business with reliable outsourcing services?
-              Connect with Secure Bridge Outsourcing for customer support,
-              lead generation, back-office operations, and business solutions.
+              Looking for high-quality leads and reliable outsourcing solutions? 
+              Connect with Secure Bridge Outsourcing to discuss Medicare, ACA, 
+              pay-per-call, and customer acquisition services tailored for your 
+              business growth.
+
             </p>
           </div>
 
@@ -1132,6 +1343,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+
+
+      
 
 
     </>

@@ -250,58 +250,7 @@ const About = () => {
 
             </section>
 
-            {/* CTA SECTION */}
-
-            <section className="sb-about-cta-section">
-
-                {/* BG SHAPES */}
-
-                <div className="sb-about-cta-blur blur-one"></div>
-                <div className="sb-about-cta-blur blur-two"></div>
-
-                <div className="container">
-
-                    <div className="sb-about-cta-box text-center">
-
-                        {/* HEADING */}
-
-                        <h2>
-                            Ready To Scale Your
-                            Business With
-                            <span> Secure Bridge?</span>
-                        </h2>
-
-                        {/* DESC */}
-
-                        <p>
-                            Partner with Secure Bridge Outsourcing for
-                            scalable outsourcing services, dedicated
-                            business support, and performance-driven
-                            growth strategies tailored for modern
-                            businesses.
-                        </p>
-
-                        {/* BUTTONS */}
-
-                        <div className="sb-about-cta-buttons">
-
-                            <button className="sb-about-primary-btn">
-                                Contact Us Today
-                                <FaArrowRight />
-                            </button>
-
-                            <button className="sb-about-secondary-btn">
-                                Explore Services
-                            </button>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-            </section>
+          
 
         </>
     );
