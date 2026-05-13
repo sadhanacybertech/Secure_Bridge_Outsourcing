@@ -1,9 +1,9 @@
 import React from "react";
-import "./Privacy-Policy.css";
+import "./Terms-Conditions.css";
 
 const PrivacyPolicy = () => {
   return (
-    <section className="privacy-page">
+    <section className="terms-page">
 
       <div className="container">
 
@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
             <div className="col-lg-9 m-auto">
                  {/* TITLE */}
 
-        <div className="privacy-top text-center">
+        <div className="terms-top text-center">
 
           <h1>
             Privacy Policy
@@ -21,11 +21,11 @@ const PrivacyPolicy = () => {
 
         {/* MAIN BOX */}
 
-        <div className="privacy-box">
+        <div className="terms-box">
 
           {/* INTRODUCTION */}
 
-          <div className="privacy-item">
+          <div className="terms-item">
 
             <h3>
               Introduction
@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
 
           {/* INFORMATION */}
 
-          <div className="privacy-item">
+          <div className="terms-item">
 
             <h3>
               Information We Collect
@@ -78,7 +78,7 @@ const PrivacyPolicy = () => {
 
           {/* USE OF DATA */}
 
-          <div className="privacy-item">
+          <div className="terms-item">
 
             <h3>
               How We Use Your Information
@@ -110,7 +110,7 @@ const PrivacyPolicy = () => {
 
           {/* SHARING */}
 
-          <div className="privacy-item">
+          <div className="terms-item">
 
             <h3>
               Sharing Your Information
@@ -127,7 +127,7 @@ const PrivacyPolicy = () => {
 
           {/* RIGHTS */}
 
-          <div className="privacy-item">
+          <div className="terms-item">
 
             <h3>
               Your Rights
@@ -159,7 +159,7 @@ const PrivacyPolicy = () => {
 
           {/* CONTACT */}
 
-          <div className="privacy-item">
+          <div className="terms-item">
 
             <h3>
               Contact Us
