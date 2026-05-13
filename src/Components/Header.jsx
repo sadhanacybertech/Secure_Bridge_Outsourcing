@@ -69,7 +69,7 @@ const Header = () => {
 
                         <Nav.Link
                             as={HashLink}
-                            smooth
+                            smooth="true"
                             to="/#services"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
@@ -79,7 +79,7 @@ const Header = () => {
 
                         <Nav.Link
                             as={HashLink}
-                            smooth
+                            smooth="true"
                             to="/#verticals"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
@@ -89,7 +89,7 @@ const Header = () => {
 
                         <Nav.Link
                             as={HashLink}
-                            smooth
+                            smooth="true"   
                             to="/#about-us"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
@@ -101,7 +101,7 @@ const Header = () => {
 
                         <Nav.Link
                             as={HashLink}
-                            smooth
+                            smooth="true"
                             to="/#contact-form"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
@@ -112,7 +112,7 @@ const Header = () => {
 
                         <Nav.Link
                             as={HashLink}
-                            smooth
+                            smooth="true"
                             to="/#faq"
                             className="nav-link-custom me-4"
                             onClick={() => setExpanded(false)}
