@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FaArrowLeft, FaArrowRight, FaBriefcase, FaBullhorn, FaBullseye, FaChartLine, FaCheckCircle, FaClipboardCheck, FaClock, FaEnvelope, FaHandshake, FaHeadset, FaHeartbeat, FaHospital, FaMapMarkerAlt, FaNetworkWired, FaPaperPlane, FaPhoneAlt, FaPhoneVolume, FaRocket, FaSearch, FaShieldAlt, FaStar, FaUserFriends, FaUsers, FaUserShield } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaBriefcase, FaBroadcastTower, FaBullhorn, FaBullseye, FaChartLine, FaCheckCircle, FaClipboardCheck, FaClock, FaEnvelope, FaHandshake, FaHeadset, FaHeartbeat, FaHospital, FaMapMarkerAlt, FaNetworkWired, FaPaperPlane, FaPhoneAlt, FaPhoneVolume, FaRocket, FaSearch, FaShieldAlt, FaStar, FaUserFriends, FaUsers, FaUserShield } from "react-icons/fa";
 import "./Home.css";
 import { FiChevronDown } from "react-icons/fi";
 import heroImg from "./images/lead.jpeg";
@@ -542,7 +542,7 @@ const Home = () => {
                 <div className="sb-vertical-card active-card">
 
                   <div className="sb-vertical-icon">
-                    <FaHeartbeat />
+                    <FaBroadcastTower />
                   </div>
                   <h4>
                     Telecommunications
