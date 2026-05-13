@@ -174,24 +174,6 @@ const Home = () => {
 
   const services = [
 
-    /* ACA */
-
-    {
-      id: 1,
-      image:
-        "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop",
-
-      title: "Affordable Care Act (ACA)",
-      active: true,
-      points: [
-        "ACA enrollment assistance",
-        "Qualified lead generation",
-        "Compliance-focused campaigns",
-        "Customer verification support",
-        "Real-time lead delivery",
-      ],
-    },
-
     /* MEDICARE */
 
     {
@@ -207,6 +189,24 @@ const Home = () => {
         "Live transfer campaigns",
         "Policy consultation support",
         "Scalable call center solutions",
+      ],
+    },
+
+    /* ACA */
+
+    {
+      id: 1,
+      image:
+        "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop",
+
+      title: "Affordable Care Act (ACA)",
+      active: true,
+      points: [
+        "ACA enrollment assistance",
+        "Qualified lead generation",
+        "Compliance-focused campaigns",
+        "Customer verification support",
+        "Real-time lead delivery",
       ],
     },
 
@@ -411,10 +411,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* =========================
-    OUR VERTICALS
-========================= */}
 
+      {/* OUR Services */}
       <section className="sb-verticals-section" id="verticals">
 
         <div className="container">
@@ -424,15 +422,18 @@ const Home = () => {
           <div className="sb-vertical-top text-center">
 
             <h2>
-              Our
-              <span> Verticals</span>
+              Our Specialized
+              <span> Services</span>
             </h2>
 
             <p>
-              Secure Bridge Outsourcing delivers specialized
-              outsourcing, healthcare, and lead generation
-              solutions with scalable strategies designed
-              for business growth and long-term success.
+              Secure Bridge Outsourcing offers industry-focused
+              services including ACA, Medicare campaigns,
+              Final Expense Insurance, Auto Insurance,
+              Debt Settlement, Pay Per Call, Education
+              Services, and customer acquisition solutions
+              tailored to help businesses scale efficiently
+              and achieve long-term success.
             </p>
 
           </div>
@@ -464,7 +465,7 @@ const Home = () => {
 
               {/* CARD 1 */}
 
-              <div className="col-lg-4 col-md-6">
+              <div className="col-lg-5 col-md-6">
 
                 <div className="sb-vertical-card">
 
@@ -488,7 +489,7 @@ const Home = () => {
 
               {/* CARD 2 */}
 
-              <div className="col-lg-4 col-md-6">
+              <div className="col-lg-5 col-md-6">
 
                 <div className="sb-vertical-card">
 
@@ -497,46 +498,24 @@ const Home = () => {
                   </div>
 
                   <h4>
-                    Account Based Marketing
+                    Advertising
                   </h4>
 
                   <p>
-                    Targeted outreach strategies focused on
-                    engaging high-value accounts and improving
-                    customer relationships.
+                    Result-driven advertising solutions designed
+                    to increase brand visibility, generate qualified
+                    leads, improve audience engagement, and maximize
+                    campaign performance across multiple industries.
                   </p>
-
                 </div>
 
               </div>
 
-              {/* CARD 3 */}
 
-              <div className="col-lg-4 col-md-6">
-
-                <div className="sb-vertical-card">
-
-                  <div className="sb-vertical-icon">
-                    <FaBriefcase />
-                  </div>
-
-                  <h4>
-                    Outsourcing Solutions
-                  </h4>
-
-                  <p>
-                    Scalable outsourcing services that help
-                    businesses optimize workflows and increase
-                    operational efficiency.
-                  </p>
-
-                </div>
-
-              </div>
 
               {/* CARD 4 */}
 
-              <div className="col-lg-4 col-md-6">
+              <div className="col-lg-5 col-md-6">
 
                 <div className="sb-vertical-card">
 
@@ -545,37 +524,37 @@ const Home = () => {
                   </div>
 
                   <h4>
-                    Customer Support
+                    Outsourcing
                   </h4>
 
                   <p>
-                    Professional support services focused on
-                    customer satisfaction, retention, and
-                    seamless communication.
+                    Scalable outsourcing solutions designed to
+                    streamline operations, improve productivity,
+                    reduce operational costs, and deliver reliable
+                    customer support with seamless business communication.
                   </p>
-
                 </div>
 
               </div>
 
               {/* CARD 5 */}
 
-              <div className="col-lg-4 col-md-6">
+              <div className="col-lg-5 col-md-6">
 
                 <div className="sb-vertical-card active-card">
 
                   <div className="sb-vertical-icon">
                     <FaHeartbeat />
                   </div>
-
                   <h4>
-                    Medicare & ACA
+                    Telecommunications
                   </h4>
 
                   <p>
-                    Specialized Medicare and ACA campaigns
-                    with compliant lead generation, customer
-                    outreach, and healthcare support services.
+                    Advanced telecommunication solutions focused on
+                    customer connectivity, inbound and outbound call
+                    support, lead engagement, and reliable communication
+                    services for business growth and customer satisfaction.
                   </p>
 
                 </div>
@@ -594,10 +573,11 @@ const Home = () => {
     SPECIALIZED SERVICES
 ========================= */}
 
+      <section
+        className="sb-services-section"
+        id="services"
+      >
 
-
-
-      <section className="sb-services-section" id="services">
         <div className="container">
 
           {/* TOP */}
@@ -605,15 +585,21 @@ const Home = () => {
           <div className="sb-services-top text-center">
 
             <h2>
-              Our Specialized
-              <span> Services</span>
+              Our Industry
+              <span>
+                {" "}Verticals
+                & Specializations
+              </span>
             </h2>
 
             <p>
-              Secure Bridge Outsourcing provides scalable
-              outsourcing, lead generation, and healthcare
-              support services with a strong specialization
-              in Medicare and ACA campaigns.
+              Secure Bridge Outsourcing delivers specialized
+              solutions across multiple industry verticals
+              including healthcare, insurance, customer support,
+              lead generation, pay-per-call, and business
+              outsourcing services designed to drive growth,
+              improve customer engagement, and maximize
+              business performance.
             </p>
 
           </div>
@@ -621,11 +607,11 @@ const Home = () => {
           {/* SERVICES */}
 
           <div className="row">
-            <div className="col-lg-11 m-auto">
+            <div className="col-xl-11 mx-auto">
 
               <div className="row g-4">
 
-                {services.map((service) => (
+                {services.map((service, index) => (
 
                   <div
                     className="col-lg-4 col-md-6"
@@ -636,6 +622,14 @@ const Home = () => {
                       className={`sb-service-card ${service.active ? "active-card" : ""
                         }`}
                     >
+
+                      {/* MOST POPULAR */}
+
+                      {index === 0 && (
+                        <div className="sb-popular-badge">
+                          Most Popular
+                        </div>
+                      )}
 
                       {/* IMAGE */}
 
@@ -652,9 +646,19 @@ const Home = () => {
 
                       <div className="sb-service-content">
 
+                        {/* ICON */}
+
+                        <div className="sb-service-icon">
+                          {service.icon}
+                        </div>
+
+                        {/* TITLE */}
+
                         <h3>
                           {service.title}
                         </h3>
+
+                        {/* LIST */}
 
                         <ul>
 
@@ -672,6 +676,7 @@ const Home = () => {
 
                         </ul>
 
+
                       </div>
 
                     </div>
@@ -681,13 +686,13 @@ const Home = () => {
                 ))}
 
               </div>
+
             </div>
           </div>
 
         </div>
 
       </section>
-
 
 
       <section className="sb-steps">
