@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
       <div className="container">
 
        <div className="row">
-            <div className="col-9 m-auto">
+            <div className="col-lg-9 m-auto">
                  {/* TITLE */}
 
         <div className="privacy-top text-center">
