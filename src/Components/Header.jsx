@@ -5,6 +5,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 
 import "./Header.css";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
 
@@ -21,8 +22,9 @@ const Header = () => {
 
                 {/* LOGO */}
                 <Navbar.Brand
-                    as={Link}
-                    to="/"
+                    as={HashLink}
+                    smooth
+                    to="/#home"
                     className="navbar-brand-custom"
                     onClick={() => setExpanded(false)}
                 >
@@ -54,8 +56,9 @@ const Header = () => {
                     <Nav className="ms-auto align-items-lg-center navbar-menu">
 
                         <Nav.Link
-                            as={Link}
-                            to="/"
+                            as={HashLink}
+                            smooth
+                            to="/#home"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
@@ -63,17 +66,19 @@ const Header = () => {
                         </Nav.Link>
 
                         <Nav.Link
-                            as={Link}
-                            to="/verticals"
+                            as={HashLink}
+                            smooth
+                            to="/#verticals"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
-                            Verticals
+                            Our Verticals
                         </Nav.Link>
 
                         <Nav.Link
-                            as={Link}
-                            to="/services"
+                            as={HashLink}
+                            smooth
+                            to="/#services"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
@@ -81,31 +86,38 @@ const Header = () => {
                         </Nav.Link>
 
                         <Nav.Link
-                            as={Link}
-                            to="/products"
+                            as={HashLink}
+                            smooth
+                            to="/#about-us"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
-                            Brands
+                            About Us
                         </Nav.Link>
 
-                        <Nav.Link
-                            as={Link}
-                            to="/about"
-                            className="nav-link-custom"
-                            onClick={() => setExpanded(false)}
-                        >
-                          About Us 
-                        </Nav.Link>
+                       
 
                         <Nav.Link
-                            as={Link}
-                            to="/careers"
+                            as={HashLink}
+                            smooth
+                            to="/#contact-form"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
                         >
-                            Careers
+                            Contact Us
                         </Nav.Link>
+
+
+                         <Nav.Link
+                            as={HashLink}
+                            smooth
+                            to="/#faq"
+                            className="nav-link-custom me-4"
+                            onClick={() => setExpanded(false)}
+                        >
+                            FAQ's
+                        </Nav.Link>
+
 
                     </Nav>
 

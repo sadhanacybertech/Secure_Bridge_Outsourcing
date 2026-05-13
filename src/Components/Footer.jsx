@@ -15,6 +15,7 @@ import {
 import "./Footer.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
@@ -50,7 +51,7 @@ const Footer = () => {
             {/* SOCIAL ICONS */}
 
             <div className="footer-socials">
-              <h6>Follow Us On : </h6> 
+              <h6>Follow Us On : </h6>
               <a
                 href="/"
                 className="footer-social facebook"
@@ -121,39 +122,51 @@ const Footer = () => {
             <ul className="footer-links">
 
               <li>
-                <Link to="/">
+                <Link as={HashLink}
+                  smooth
+                  to="/#home" onClick={() => setExpanded(false)}>
                   <IoIosArrowForward />
                   Home
                 </Link>
               </li>
 
               <li>
-                <Link to="/services">
+                <Link as={HashLink}
+                  smooth
+                  to="/#verticals" onClick={() => setExpanded(false)}>
+                  <IoIosArrowForward />
+                  Our Verticals
+                </Link>
+              </li>
+
+              <li>
+                <Link as={HashLink}
+                  smooth
+                  to="/#services" onClick={() => setExpanded(false)}>
                   <IoIosArrowForward />
                   Services
                 </Link>
               </li>
 
               <li>
-                <Link to="/about">
+                <Link as={HashLink}
+                  smooth
+                  to="/#about-us" onClick={() => setExpanded(false)}>
                   <IoIosArrowForward />
                   About Us
                 </Link>
               </li>
 
               <li>
-                <Link to="/careers">
+                <Link as={HashLink}
+                  smooth
+                  to="/#contact-form" onClick={() => setExpanded(false)}>
                   <IoIosArrowForward />
-                  Careers
+                  Contact Us
                 </Link>
               </li>
 
-              <li>
-                <Link to="/contact">
-                  <IoIosArrowForward />
-                  Contact
-                </Link>
-              </li>
+
 
             </ul>
 
@@ -176,18 +189,13 @@ const Footer = () => {
               </li>
 
               <li>
-                <Link to="/terms">
+                <Link to="/terms-conditions">
                   <IoIosArrowForward />
                   Terms & Conditions
                 </Link>
               </li>
 
-              <li>
-                <Link to="/refund-policy">
-                  <IoIosArrowForward />
-                  Refund Policy
-                </Link>
-              </li>
+
 
             </ul>
 

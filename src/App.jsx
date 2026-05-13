@@ -8,6 +8,9 @@ import Whatsapp from "./Components/Whatsapp";
 
 import Home from "./Home";
 import About from "./Pages/About";
+import PrivacyPolicy from "./Pages/Privacy-Policy";
+import TermsConditions from "./Pages/Terms-Conditions";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
 
@@ -15,6 +18,7 @@ function App() {
     <>
 
       {/* HEADER */}
+        <ScrollToTop />
 
       <Header />
 
@@ -33,11 +37,14 @@ function App() {
           element={<Home />}
         />
 
-        {/* ABOUT */}
+          <Route
+          path="/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
 
-        <Route
-          path="/about"
-          element={<About />}
+          <Route
+          path="/terms-conditions"
+          element={<TermsConditions />}
         />
 
       </Routes>

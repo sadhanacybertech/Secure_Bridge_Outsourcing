@@ -4,6 +4,7 @@ import "./Home.css";
 import { FiChevronDown } from "react-icons/fi";
 import heroImg from "./images/lead.jpeg";
 import { IoDiscSharp } from "react-icons/io5";
+import { HashLink } from "react-router-hash-link";
 const Home = () => {
 
   const slides = [
@@ -326,36 +327,44 @@ const Home = () => {
 
   return (
     <>
-      <section className="sb-hero">
+      <section className="sb-hero" id="home">
         <div className="sb-hero-container">
           {/* LEFT CONTENT */}
           <div className="sb-hero-content">
 
 
             <h1 className="sb-hero-title">
-              Secure Business
-
-              Solutions That
-
-              Drive Growth
+              Get Verified Leads That Convert
             </h1>
 
             <p className="sb-hero-desc">
-              Secure Bridge Outsourcing delivers reliable customer support,
-              back-office operations, IT solutions, and business process
-              outsourcing services with complete data security and guaranteed
-              efficiency.
+              Secure Bridge Outsourcing provides high-quality, verified leads
+              and reliable outsourcing solutions across multiple industries.
+              We help businesses connect with the right audience
+              through strategic lead generation systems, business support
+              services, and quality-driven solutions designed for real growth.
             </p>
 
             <div className="sb-hero-buttons">
-              <button className="sb-primary-btn">
-                Get Verified Leads
-                <FaArrowRight />
-              </button>
+              <a
+                href="https://wa.me/919873251672"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none"
+              >
+                <button className="sb-primary-btn">
+                  Get Verified Leads
+                  <FaArrowRight />
+                </button>
+              </a>
 
-              <button className="sb-secondary-btn">
+              <HashLink
+                smooth
+                to="/#services"
+                className="sb-secondary-btn text-decoration-none"
+              >
                 Explore Services
-              </button>
+              </HashLink>
             </div>
 
             {/* STATS */}
@@ -406,7 +415,7 @@ const Home = () => {
     OUR VERTICALS
 ========================= */}
 
-      <section className="sb-verticals-section">
+      <section className="sb-verticals-section" id="verticals">
 
         <div className="container">
 
@@ -588,7 +597,7 @@ const Home = () => {
 
 
 
-      <section className="sb-services-section">
+      <section className="sb-services-section" id="services">
         <div className="container">
 
           {/* TOP */}
@@ -610,68 +619,68 @@ const Home = () => {
           </div>
 
           {/* SERVICES */}
-          
+
           <div className="row">
             <div className="col-lg-11 m-auto">
-              
-          <div className="row g-4">
 
-            {services.map((service) => (
+              <div className="row g-4">
 
-              <div
-                className="col-lg-4 col-md-6"
-                key={service.id}
-              >
+                {services.map((service) => (
 
-                <div
-                  className={`sb-service-card ${service.active ? "active-card" : ""
-                    }`}
-                >
+                  <div
+                    className="col-lg-4 col-md-6"
+                    key={service.id}
+                  >
 
-                  {/* IMAGE */}
+                    <div
+                      className={`sb-service-card ${service.active ? "active-card" : ""
+                        }`}
+                    >
 
-                  <div className="sb-service-image">
+                      {/* IMAGE */}
 
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                    />
+                      <div className="sb-service-image">
+
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                        />
+
+                      </div>
+
+                      {/* CONTENT */}
+
+                      <div className="sb-service-content">
+
+                        <h3>
+                          {service.title}
+                        </h3>
+
+                        <ul>
+
+                          {service.points.map((point, index) => (
+
+                            <li key={index}>
+
+                              <IoDiscSharp />
+
+                              {point}
+
+                            </li>
+
+                          ))}
+
+                        </ul>
+
+                      </div>
+
+                    </div>
 
                   </div>
 
-                  {/* CONTENT */}
-
-                  <div className="sb-service-content">
-
-                    <h3>
-                      {service.title}
-                    </h3>
-
-                    <ul>
-
-                      {service.points.map((point, index) => (
-
-                        <li key={index}>
-
-                          <IoDiscSharp />
-
-                          {point}
-
-                        </li>
-
-                      ))}
-
-                    </ul>
-
-                  </div>
-
-                </div>
+                ))}
 
               </div>
-
-            ))}
-
-          </div>
             </div>
           </div>
 
@@ -680,9 +689,56 @@ const Home = () => {
       </section>
 
 
+
+      <section className="sb-steps">
+        <div className="sb-steps-container">
+
+          {/* TOP CONTENT */}
+
+          <div className="sb-steps-top">
+            <h2>
+              Transform Your Business <br />
+              <span> In 4 Smart Steps</span>
+            </h2>
+
+            <p>
+              We help businesses streamline operations, improve customer
+              experience, and scale faster with secure outsourcing solutions.
+            </p>
+          </div>
+
+          {/* STEPS */}
+
+          <div className="sb-steps-wrapper">
+            {steps.map((item, index) => (
+              <div className="sb-step-card" key={index}>
+
+                <div className="sb-step-number">
+                  {item.number}
+                </div>
+
+                <div className="sb-step-icon">
+                  {item.icon}
+                </div>
+
+                <h3>{item.title}</h3>
+
+                <p>{item.desc}</p>
+
+                {index !== steps.length - 1 && (
+                  <div className="sb-arrow-line"></div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
       {/* ABOUT COMPANY */}
 
-      <section className="about-company-modern">
+      <section className="about-company-modern" id="about-us">
 
         <div className="container">
 
@@ -782,56 +838,9 @@ const Home = () => {
       </section>
 
 
-      <section className="sb-steps">
-        <div className="sb-steps-container">
-
-          {/* TOP CONTENT */}
-
-          <div className="sb-steps-top">
-            <h2>
-              Transform Your Business <br />
-              <span> In 4 Smart Steps</span>
-            </h2>
-
-            <p>
-              We help businesses streamline operations, improve customer
-              experience, and scale faster with secure outsourcing solutions.
-            </p>
-          </div>
-
-          {/* STEPS */}
-
-          <div className="sb-steps-wrapper">
-            {steps.map((item, index) => (
-              <div className="sb-step-card" key={index}>
-
-                <div className="sb-step-number">
-                  {item.number}
-                </div>
-
-                <div className="sb-step-icon">
-                  {item.icon}
-                </div>
-
-                <h3>{item.title}</h3>
-
-                <p>{item.desc}</p>
-
-                {index !== steps.length - 1 && (
-                  <div className="sb-arrow-line"></div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
 
-
-
-
-
-      <section className="sb-contact-section">
+      <section className="sb-contact-section" id="contact-form">
         <div className="container">
 
           {/* TOP */}
@@ -974,19 +983,39 @@ const Home = () => {
 
                   <div>
                     <h5>Phone</h5>
-                    <p>+91 9873251672</p>
+
+                    <a
+                      href="tel:+919873251672"
+                      className="text-decoration-none"
+                    >
+                      <p className="mb-0">
+                        +91 9873251672
+                      </p>
+                    </a>
                   </div>
                 </div>
 
                 <div className="sb-info-item">
+
                   <div className="sb-info-icon">
                     <FaEnvelope />
                   </div>
 
                   <div>
+
                     <h5>Email</h5>
-                    <p>securebridgepvtltd@gmail.com</p>
+
+                    <a
+                      href="mailto:securebridgepvtltd@gmail.com"
+                      className="text-decoration-none"
+                    >
+                      <p className="mb-0">
+                        securebridgepvtltd@gmail.com
+                      </p>
+                    </a>
+
                   </div>
+
                 </div>
 
                 <div className="sb-info-item">
@@ -1044,7 +1073,7 @@ const Home = () => {
       </section>
 
 
-      <section className="faq-section">
+      <section className="faq-section" id="faq">
         <div className="container">
 
           {/* TOP */}
