@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import logo from "../images/footer-logo.png"
 import {
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaArrowRight,
-  FaYoutube,
   FaLinkedinIn,
   FaInstagram,
   FaFacebookF,
@@ -31,18 +29,19 @@ const Footer = () => {
 
             <div className="footer-logo">
 
-              <span className="footer-logo-blue">
-                Secure
-              </span>
-
-              <span className="footer-logo-dark">
-                Bridge Outsourcing
-              </span>
+              <img
+                src={logo}
+                alt="Secure Bridge Outsourcing Logo"
+                width="300"
+                height="60"
+                loading="lazy"
+                decoding="async"
+              />
 
             </div>
 
             <p className="footer-desc">
-              Secure Bridge Outsourcing Pvt. Ltd. provides high-intent, TCPA-compliant lead generation and outsourcing 
+              Secure Bridge Outsourcing Pvt. Ltd. provides high-intent, TCPA-compliant lead generation and outsourcing
               solutions with quality-driven support designed to help businesses grow faster and smarter.
             </p>
 

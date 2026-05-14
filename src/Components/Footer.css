@@ -468,6 +468,64 @@
     );
 }
 
+
+/* =========================
+   FOOTER LOGO
+========================= */
+
+.footer-logo{
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+/* IMAGE */
+
+.footer-logo img{
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: 0.35s ease;
+}
+
+/* HOVER */
+
+.footer-logo:hover img{
+  transform:
+    scale(1.03);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px){
+
+  .footer-logo{
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .footer-logo img{
+    width: 190px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px){
+
+  .footer-logo img{
+    width: 160px;
+  }
+}
+
+
 /* =========================
    FOOTER BOTTOM
 ========================= */

@@ -7,6 +7,8 @@ import { IoClose } from "react-icons/io5";
 import "./Header.css";
 import { HashLink } from "react-router-hash-link";
 
+import logo from "../images/logo.jpeg"
+
 const Header = () => {
 
     const [expanded, setExpanded] = useState(false);
@@ -21,22 +23,25 @@ const Header = () => {
             <Container>
 
                 {/* LOGO */}
+
                 <Navbar.Brand
-                    as={HashLink}
-                    smooth="true"
-                    to="/#home"
+                    as={Link}
+                    to="/"
                     className="navbar-brand-custom"
                     onClick={() => setExpanded(false)}
                 >
-                    <span className="brand-highlight">
-                        Secure
-                    </span>
 
-                    <span className="brand-text">
-                        Bridge Outsourcing
-                    </span>
+                    <img
+                        src={logo}
+                        alt="Secure Bridge Outsourcing Logo"
+                        width="220"
+                        height="52"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
+                    />
+
                 </Navbar.Brand>
-
                 {/* CUSTOM TOGGLE BUTTON */}
                 <button
                     className="mobile-toggle-btn d-lg-none"

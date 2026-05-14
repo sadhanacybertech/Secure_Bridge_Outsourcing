@@ -94,6 +94,71 @@
   gap: 2px;
 }
 
+/* =========================
+   NAVBAR LOGO
+========================= */
+
+.navbar-brand-custom{
+  display: flex;
+  align-items: center;
+
+  padding: 0;
+
+  margin-right: 0;
+}
+
+/* LOGO */
+
+.navbar-brand-custom img{
+  width: 320px;
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  transition: 0.35s ease;
+}
+
+/* HOVER */
+
+.navbar-brand-custom:hover img{
+  transform:
+    scale(1.02);
+}
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media (max-width: 992px){
+
+  .navbar-brand-custom img{
+    width: 190px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+  .navbar-brand-custom img{
+    width: 165px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px){
+
+  .navbar-brand-custom img{
+    width: 145px;
+  }
+}
 /* LINK */
 
 .nav-link-custom {
