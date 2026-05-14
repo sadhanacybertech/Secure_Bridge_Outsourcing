@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+sitemap:https://secure-bridge-outsourcing.onrender.com/sitemap.xml

@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
+import { useEffect, useState } from "react";
+
 import "./App.css";
 
 import Header from "./Components/Header";
@@ -10,15 +12,55 @@ import Home from "./Home";
 import About from "./Pages/About";
 import PrivacyPolicy from "./Pages/Privacy-Policy";
 import TermsConditions from "./Pages/Terms-Conditions";
+
 import ScrollToTop from "./Components/ScrollToTop";
+import BackToTop from "./Components/BackToTop";
+
+import Loader from "./Components/Loader";
 
 function App() {
+
+  /* =========================
+     LOADER
+  ========================= */
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+
+      setLoading(false);
+
+    }, 2000);
+
+    return () => clearTimeout(timer);
+
+  }, []);
+
+  /* SHOW LOADER */
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <>
 
+      {/* SCROLL TOP */}
+
+      <ScrollToTop />
+
+      {/* SKIP LINK */}
+
+      <a
+        href="#main-content"
+        className="skip-link"
+      >
+        Skip to content
+      </a>
+
       {/* HEADER */}
-        <ScrollToTop />
 
       <Header />
 
@@ -26,28 +68,47 @@ function App() {
 
       <Whatsapp />
 
-      {/* ROUTES */}
+      {/* MAIN CONTENT */}
 
-      <Routes>
+      <main id="main-content">
 
-        {/* HOME */}
+        <Routes>
 
-        <Route
-          path="/"
-          element={<Home />}
-        />
+          {/* HOME */}
 
           <Route
-          path="/privacy-policy"
-          element={<PrivacyPolicy />}
-        />
+            path="/"
+            element={<Home />}
+          />
+
+          {/* ABOUT */}
 
           <Route
-          path="/terms-conditions"
-          element={<TermsConditions />}
-        />
+            path="/about"
+            element={<About />}
+          />
 
-      </Routes>
+          {/* PRIVACY POLICY */}
+
+          <Route
+            path="/privacy-policy"
+            element={<PrivacyPolicy />}
+          />
+
+          {/* TERMS */}
+
+          <Route
+            path="/terms-conditions"
+            element={<TermsConditions />}
+          />
+
+        </Routes>
+
+      </main>
+
+      {/* BACK TO TOP */}
+
+      <BackToTop />
 
       {/* FOOTER */}
 

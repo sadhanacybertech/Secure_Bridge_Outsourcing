@@ -1,100 +1,23 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FaArrowLeft, FaArrowRight, FaBriefcase, FaBroadcastTower, FaBullhorn, FaBullseye, FaChartLine, FaCheckCircle, FaClipboardCheck, FaClock, FaEnvelope, FaHandshake, FaHeadset, FaHeartbeat, FaHospital, FaMapMarkerAlt, FaNetworkWired, FaPaperPlane, FaPhoneAlt, FaPhoneVolume, FaRocket, FaSearch, FaShieldAlt, FaStar, FaUserFriends, FaUsers, FaUserShield } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaBriefcase, FaBroadcastTower, FaBullhorn, FaBullseye, FaChartBar, FaChartLine, FaCheckCircle, FaClipboardCheck, FaClock, FaEnvelope, FaHandshake, FaHeadset, FaHeartbeat, FaHospital, FaMapMarkerAlt, FaNetworkWired, FaPaperPlane, FaPhoneAlt, FaPhoneVolume, FaRocket, FaSatelliteDish, FaSearch, FaShareSquare, FaShieldAlt, FaStar, FaUserFriends, FaUsers, FaUserShield } from "react-icons/fa";
 import "./Home.css";
 import { FiChevronDown } from "react-icons/fi";
 import heroImg from "./images/lead.jpeg";
 import { IoDiscSharp, IoStarHalf } from "react-icons/io5";
 import { HashLink } from "react-router-hash-link";
-import { IoIosDisc } from "react-icons/io";
+import { IoIosDisc, IoMdCheckmarkCircleOutline } from "react-icons/io";
 import ppcImg from "./images/ppc.jpeg";
 import aboutImg from "./images/About.jpeg";
+import { PiPhoneCallFill } from "react-icons/pi";
+
+import medicare from "./images/Medicare-Campaigns.avif";
+import aca from "./images/aca.avif";
+import finalExpenseImg from "./images/Final-Expense.avif";
+import autoInsuranceImg from "./images/auto-insurance.avif";
+import ssdiImg from "./images/Social-Security.avif";
+import debtSettlementImg from "./images/Debt-Settlement.avif";
+import educationImg from "./images/education.avif";
 const Home = () => {
-
-  const slides = [
-    {
-      id: 1,
-      image:
-        "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600&auto=format&fit=crop",
-      title: (
-        <>
-          Ready To Scale Your Business With Confidence?
-        </>
-      ),
-      desc:
-        "Secure Bridge Outsourcing helps businesses streamline customer support, lead generation, IT operations, and back-office management with secure and scalable outsourcing solutions.",
-    },
-
-    {
-      id: 2,
-      image:
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
-      title: (
-        <>
-          Reliable Customer Support That Builds Trust
-        </>
-      ),
-      desc:
-        "Deliver seamless customer experiences with our 24/7 support teams, multilingual assistance, and professional call center solutions.",
-    },
-
-    {
-      id: 3,
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600&auto=format&fit=crop",
-      title: (
-        <>
-          Smart Outsourcing Solutions For Modern Brands
-        </>
-      ),
-      desc:
-        "From lead generation to IT outsourcing, we help businesses reduce costs, improve productivity, and scale operations faster.",
-    },
-  ];
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  /* AUTO SLIDER */
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) =>
-        prev === slides.length - 1 ? 0 : prev + 1
-      );
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-
-  const steps = [
-    {
-      icon: <FaUsers />,
-      title: "Connect",
-      desc: "We understand your business goals and identify the right outsourcing strategy tailored for your operations.",
-      number: "01",
-    },
-
-    {
-      icon: <FaClipboardCheck />,
-      title: "Plan",
-      desc: "Our experts build customized support, lead generation, and business process solutions for your company.",
-      number: "02",
-    },
-
-    {
-      icon: <FaRocket />,
-      title: "Execute",
-      desc: "Secure Bridge Outsourcing launches scalable and result-driven services to improve efficiency and growth.",
-      number: "03",
-    },
-
-    {
-      icon: <FaShieldAlt />,
-      title: "Grow Securely",
-      desc: "Experience long-term success with secure operations, dedicated teams, and 24/7 business support.",
-      number: "04",
-    },
-  ];
-
 
 
 
@@ -102,7 +25,7 @@ const Home = () => {
     {
       question: "What types of leads do you provide?",
       answer:
-        "We provide high-quality leads across multiple industries, including Medicare, ACA, and other targeted business verticals.",
+        "We provide high - intent, TCPA-compliant leads with proper consumer consent and quality standards maintained",
     },
 
     {
@@ -181,8 +104,7 @@ const Home = () => {
 
     {
       id: 1,
-      image:
-        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop",
+      image: medicare,
 
       title: "Medicare Campaigns",
 
@@ -199,8 +121,7 @@ const Home = () => {
 
     {
       id: 2,
-      image:
-        "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop",
+      image: aca,
 
       title: "Affordable Care Act (ACA)",
       active: true,
@@ -217,9 +138,7 @@ const Home = () => {
 
     {
       id: 3,
-      image:
-        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop",
-
+      image: finalExpenseImg,
 
       title: "Final Expense Insurance",
 
@@ -236,10 +155,7 @@ const Home = () => {
 
     {
       id: 4,
-      image:
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop",
-
-
+      image: autoInsuranceImg,
       title: "Auto Insurance",
 
       points: [
@@ -255,10 +171,7 @@ const Home = () => {
 
     {
       id: 5,
-      image:
-        "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
-
-
+      image: ssdiImg,
       title: "Social Security Disability Insurance",
 
       points: [
@@ -274,9 +187,7 @@ const Home = () => {
 
     {
       id: 6,
-      image:
-        "https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=1200&auto=format&fit=crop",
-
+      image: debtSettlementImg,
 
       title: "Debt Settlement",
 
@@ -293,7 +204,7 @@ const Home = () => {
 
     {
       id: 7,
-      image:ppcImg,
+      image: ppcImg,
 
 
       title: "Pay Per Call",
@@ -311,9 +222,7 @@ const Home = () => {
 
     {
       id: 8,
-      image:
-        "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
-
+      image: educationImg,
 
       title: "Education Services",
 
@@ -468,7 +377,7 @@ const Home = () => {
                 <div className="sb-vertical-card">
 
                   <div className="sb-vertical-icon">
-                    <FaHandshake />
+                    <FaBullseye />
                   </div>
 
                   <h4>
@@ -492,7 +401,7 @@ const Home = () => {
                 <div className="sb-vertical-card">
 
                   <div className="sb-vertical-icon">
-                  <FaBullhorn />
+                    <FaChartBar />
                   </div>
 
                   <h4>
@@ -518,7 +427,7 @@ const Home = () => {
                 <div className="sb-vertical-card">
 
                   <div className="sb-vertical-icon">
-                    <FaNetworkWired />
+                    <FaHeadset />
                   </div>
 
                   <h4>
@@ -542,7 +451,7 @@ const Home = () => {
                 <div className="sb-vertical-card active-card">
 
                   <div className="sb-vertical-icon">
-                    <FaBroadcastTower />
+                    <FaSatelliteDish />
                   </div>
                   <h4>
                     Telecommunications
@@ -745,9 +654,9 @@ const Home = () => {
 
                   <div className="aca-benefits">
 
-                    <h4>
+                    <strong className="fw-bold">
                       Key Benefits
-                    </h4>
+                    </strong>
 
                     <div className="aca-benefit-list">
 
@@ -863,9 +772,9 @@ const Home = () => {
 
                   <div className="aca-health-benefits">
 
-                    <h4>
+                    <strong className="fw-bold" >
                       Key Benefits :
-                    </h4>
+                    </strong>
 
                     <div className="aca-health-grid">
 
@@ -951,6 +860,245 @@ const Home = () => {
 
 
 
+
+      {/* =========================
+    ADVANCED SERVICES
+========================= */}
+
+      <section className="advanced-services-section">
+
+        <div className="container">
+
+          {/* TOP */}
+
+          <div className="advanced-services-top text-center">
+
+
+            <h2>
+              Our
+              <span> Advanced Services</span>
+            </h2>
+
+            <p>
+              Secure Bridge Outsourcing provides scalable,
+              performance-driven outsourcing and marketing
+              solutions designed to improve customer engagement,
+              increase conversions, and accelerate business growth.
+            </p>
+
+          </div>
+
+          {/* SERVICES GRID */}
+
+          <div className="row g-4">
+
+            {/* CARD 1 */}
+
+            <div className="col-lg-6">
+
+              <div className="advanced-service-card">
+
+                <div className="advanced-service-icon ppc-icon">
+                  <FaHeadset />
+                </div>
+
+                <h3>
+                  Pay-Per-Call Solutions
+                </h3>
+
+                <p>
+                  Targeted call-based marketing services designed to deliver
+                  quality customer inquiries and higher conversion opportunities.
+                </p>
+
+                <strong className="fw-bold" >
+                  Specializations:
+                </strong>
+
+                <ul>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    High-intent customer calls
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Campaign performance tracking
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Real-time call connections
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Conversion-oriented strategies
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+            {/* CARD 2 */}
+
+            <div className="col-lg-6">
+
+              <div className="advanced-service-card">
+
+                <div className="advanced-service-icon call-icon">
+                  <PiPhoneCallFill />
+                </div>
+
+                <h3>
+                  Inbound & Outbound Support
+                </h3>
+
+                <p>
+                  Efficient communication services focused on customer interaction, sales support, and business engagement.
+                </p>
+
+                <strong className="fw-bold" >
+                  Specializations:
+                </strong>
+
+                <ul>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Customer assistance services
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Outbound engagement campaigns
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Call handling support
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Business communication management
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+            {/* CARD 3 */}
+
+            <div className="col-lg-6">
+
+              <div className="advanced-service-card">
+
+                <div className="advanced-service-icon support-icon">
+                  <FaShareSquare />
+                </div>
+
+                <h3>
+                  Live Transfer Services
+                </h3>
+
+                <p>
+                  Real-time lead transfer solutions that connect businesses directly with interested and verified customers.
+                </p>
+
+                <strong className="fw-bold" >
+                  Specializations:
+                </strong>
+
+                <ul>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Qualified customer transfers
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Instant lead connectivity
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Lead screening support
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Sales-focused call routing
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+            {/* CARD 4 */}
+
+            <div className="col-lg-6">
+
+              <div className="advanced-service-card">
+
+                <div className="advanced-service-icon legal-icon">
+                  <FaHandshake />
+                </div>
+
+                <h3>
+                  Customer Engagement Solutions
+                </h3>
+
+                <p>
+                  Professional support solutions designed to
+                  improve customer experience and strengthen business relationships
+                </p>
+
+                <strong className="fw-bold" >
+                  Specializations:
+                </strong>
+
+                <ul>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Customer interaction management
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Email & chat assistance
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    CRM coordination support
+                  </li>
+
+                  <li>
+                    <IoMdCheckmarkCircleOutline />
+                    Continuous support services
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
 
 
 
@@ -1145,15 +1293,37 @@ const Home = () => {
                     </div>
 
                     <div className="col-md-6">
-                      <label>Select Service</label>
 
-                      <select className="form-select">
-                        <option>Choose Service</option>
-                        <option>Lead Generation</option>
-                        <option>Customer Support</option>
-                        <option>BPO Services</option>
-                        <option>IT Outsourcing</option>
+                      <label htmlFor="serviceSelect">
+                        Select Service
+                      </label>
+
+                      <select
+                        id="serviceSelect"
+                        className="form-select"
+                      >
+                        <option>
+                          Choose Service
+                        </option>
+
+                        <option>
+                          Lead Generation
+                        </option>
+
+                        <option>
+                          Customer Support
+                        </option>
+
+                        <option>
+                          BPO Services
+                        </option>
+
+                        <option>
+                          IT Outsourcing
+                        </option>
+
                       </select>
+
                     </div>
 
                     <div className="col-12">
@@ -1196,7 +1366,7 @@ const Home = () => {
                   </div>
 
                   <div>
-                    <h5>Phone</h5>
+                    <strong className="fw-bold">Phone</strong>
 
                     <a
                       href="tel:+919873251672"
@@ -1217,14 +1387,14 @@ const Home = () => {
 
                   <div>
 
-                    <h5>Email</h5>
+                    <strong className="fw-bold">Email</strong>
 
                     <a
-                      href="mailto:securebridgepvtltd@gmail.com"
+                      href="mailto:connect@securebridgeltd.com"
                       className="text-decoration-none"
                     >
                       <p className="mb-0">
-                        securebridgepvtltd@gmail.com
+                        connect@securebridgeltd.com
                       </p>
                     </a>
 
@@ -1238,7 +1408,7 @@ const Home = () => {
                   </div>
 
                   <div>
-                    <h5>Address</h5>
+                    <strong className="fw-bold">Address</strong>
                     <p>B -17 ,Second Floor Sector -59 Noida,
                       Uttar Pradesh, India
                     </p>
@@ -1251,8 +1421,8 @@ const Home = () => {
                   </div>
 
                   <div>
-                    <h5>Business Hours</h5>
-                    <p>Mon - Sat : 9:00 AM - 7:00 PM</p>
+                    <strong className="fw-bold">Business Hours</strong>
+                    <p>Mon - Sat : 6:00 PM - 4:00 AM</p>
                   </div>
                 </div>
 
@@ -1260,7 +1430,7 @@ const Home = () => {
 
                 <div className="sb-why-box">
 
-                  <h4>Why Choose Secure Bridge?</h4>
+                  <strong className="fw-bold">Why Choose Secure Bridge?</strong>
 
                   <div className="sb-why-item">
                     <FaCheckCircle />

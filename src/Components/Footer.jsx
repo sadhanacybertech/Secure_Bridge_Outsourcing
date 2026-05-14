@@ -97,13 +97,29 @@ const Footer = () => {
             <ul className="footer-contact">
 
               <li>
+
                 <FaPhoneAlt className="footer-contact-icon" />
-                <span>+91 9873251672</span>
+
+                <a
+                  href="tel:+919873251672"
+                  className="footer-contact-link"
+                >
+                  +91 9873251672
+                </a>
+
               </li>
 
               <li>
+
                 <FaEnvelope className="footer-contact-icon" />
-                <span>securebridgepvtltd@gmail.com</span>
+
+                <a
+                  href="mailto:connect@securebridgeltd.com"
+                  className="footer-contact-link"
+                >
+                  connect@securebridgeltd.com
+                </a>
+
               </li>
 
               <li>
@@ -126,7 +142,7 @@ const Footer = () => {
 
               <li>
                 <Link as={HashLink}
-                  smooth
+                  smooth="true"
                   to="/#home" onClick={() => setExpanded(false)}>
                   <IoIosArrowForward />
                   Home
@@ -135,7 +151,7 @@ const Footer = () => {
 
               <li>
                 <Link as={HashLink}
-                  smooth
+                  smooth="true"
                   to="/#verticals" onClick={() => setExpanded(false)}>
                   <IoIosArrowForward />
                   Our Verticals
@@ -144,7 +160,7 @@ const Footer = () => {
 
               <li>
                 <Link as={HashLink}
-                  smooth
+                  smooth="true"
                   to="/#services" onClick={() => setExpanded(false)}>
                   <IoIosArrowForward />
                   Services
@@ -153,7 +169,7 @@ const Footer = () => {
 
               <li>
                 <Link as={HashLink}
-                  smooth
+                  smooth="true"
                   to="/#about-us" onClick={() => setExpanded(false)}>
                   <IoIosArrowForward />
                   About Us
@@ -162,7 +178,7 @@ const Footer = () => {
 
               <li>
                 <Link as={HashLink}
-                  smooth
+                  smooth="true"
                   to="/#contact-form" onClick={() => setExpanded(false)}>
                   <IoIosArrowForward />
                   Contact Us
@@ -177,7 +193,6 @@ const Footer = () => {
 
           {/* POLICIES */}
           <div className="col-lg-3 col-md-6">
-
             <strong className="footer-title fs-4">
               Policies
             </strong>
@@ -214,7 +229,7 @@ const Footer = () => {
         <div className="container">
 
           <p>
-            © 2026 Secure Bridge Outsourcing.
+            © 2026 Secure Bridge Outsourcing Pvt Ltd.
             All Rights Reserved.
           </p>
 
