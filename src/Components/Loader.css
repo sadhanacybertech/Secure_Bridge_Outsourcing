@@ -1,52 +1,110 @@
 /* =========================
-   LOADER
+   PREMIUM LOADER
 ========================= */
 
 .sb-loader-wrapper{
   position: fixed;
+
   inset: 0;
+
   width: 100%;
   height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  z-index: 999999;
+
   background:
     linear-gradient(
       135deg,
       #ffffff 0%,
-      #f8fbff 100%
+      #f8fbff 45%,
+      #eef4ff 100%
     );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 999999;
-  overflow: hidden;
 }
 
-/* BG EFFECT */
+/* =========================
+   BACKGROUND EFFECTS
+========================= */
 
 .sb-loader-wrapper::before{
   content: "";
+
   position: absolute;
-  width: 350px;
-  height: 350px;
-  background:
-    rgba(214,59,59,0.08);
+
+  top: -120px;
+  left: -120px;
+
+  width: 380px;
+  height: 380px;
+
   border-radius: 50%;
-  top: -100px;
-  left: -100px;
-  filter: blur(80px);
+
+  background:
+    rgba(214,59,59,0.10);
+
+  filter: blur(90px);
+
+  animation:
+    floatOne 5s infinite ease-in-out;
 }
 
 .sb-loader-wrapper::after{
   content: "";
+
   position: absolute;
-  width: 350px;
-  height: 350px;
-  background:
-    rgba(30,58,138,0.08);
+
+  bottom: -140px;
+  right: -140px;
+
+  width: 380px;
+  height: 380px;
+
   border-radius: 50%;
-  bottom: -120px;
-  right: -120px;
-  filter: blur(80px);
+
+  background:
+    rgba(30,58,138,0.10);
+
+  filter: blur(90px);
+
+  animation:
+    floatTwo 5s infinite ease-in-out;
+}
+
+/* =========================
+   CENTER BOX
+========================= */
+
+.sb-loader-box{
+  position: relative;
+
+  z-index: 5;
+
+  text-align: center;
+
+  padding: 50px 40px;
+
+  border-radius: 34px;
+
+  background:
+    rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(14px);
+
+  border:
+    1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 25px 60px rgba(15,23,42,0.08);
+
+  animation:
+    fadeUp 0.8s ease;
 }
 
 /* =========================
@@ -54,43 +112,55 @@
 ========================= */
 
 .sb-loader-logo{
-  position: relative;
-  z-index: 2;
-  font-size: clamp(2.2rem,5vw,3rem);
+  font-size: clamp(2.3rem,5vw,4rem);
+
   font-weight: 800;
-  margin-bottom: 28px;
+
+  line-height: 1.1;
+
   letter-spacing: -2px;
+
+  margin-bottom: 26px;
 }
+
+/* RED */
 
 .sb-loader-red{
   color: #d63b3b;
 }
+
+/* DARK */
 
 .sb-loader-dark{
   color: #111827;
 }
 
 /* =========================
-   LINE
+   LOADER LINE
 ========================= */
 
 .sb-loader-line{
   position: relative;
-  width: 240px;
-  height: 8px;
-  border-radius: 30px;
+
+  width: 260px;
+  height: 10px;
+
   overflow: hidden;
+
+  border-radius: 50px;
+
+  margin: 0 auto 22px;
+
   background:
-    rgba(203,213,225,0.4);
-
-  margin-bottom: 20px;
-
-  z-index: 2;
+    rgba(203,213,225,0.45);
 }
+
+/* MOVING LINE */
 
 .sb-loader-line span{
   position: absolute;
 
+  top: 0;
   left: -40%;
 
   width: 40%;
@@ -106,8 +176,11 @@
       #1e3a8a
     );
 
+  box-shadow:
+    0 0 18px rgba(124,58,237,0.45);
+
   animation:
-    loaderMove 1.2s infinite ease-in-out;
+    loaderMove 1.3s infinite ease-in-out;
 }
 
 /* =========================
@@ -115,19 +188,58 @@
 ========================= */
 
 .sb-loader-wrapper p{
-  position: relative;
-
-  z-index: 2;
-
   font-size: 15px;
+
+  font-weight: 500;
 
   color: #64748b;
 
   letter-spacing: 0.5px;
+
+  margin-bottom: 0;
 }
 
 /* =========================
-   ANIMATION
+   DOTS
+========================= */
+
+.sb-loader-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 22px;
+}
+
+.sb-loader-dots span{
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d63b3b,
+      #1e3a8a
+    );
+
+  animation:
+    bounce 1s infinite ease-in-out;
+}
+
+.sb-loader-dots span:nth-child(2){
+  animation-delay: 0.2s;
+}
+
+.sb-loader-dots span:nth-child(3){
+  animation-delay: 0.4s;
+}
+
+/* =========================
+   ANIMATIONS
 ========================= */
 
 @keyframes loaderMove{
@@ -141,22 +253,132 @@
   }
 }
 
+/* FLOAT */
+
+@keyframes floatOne{
+
+  0%,100%{
+    transform:
+      translateY(0);
+  }
+
+  50%{
+    transform:
+      translateY(20px);
+  }
+}
+
+@keyframes floatTwo{
+
+  0%,100%{
+    transform:
+      translateY(0);
+  }
+
+  50%{
+    transform:
+      translateY(-20px);
+  }
+}
+
+/* BOUNCE */
+
+@keyframes bounce{
+
+  0%,100%{
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+
+  50%{
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+/* FADE */
+
+@keyframes fadeUp{
+
+  from{
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.96);
+  }
+
+  to{
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
 /* =========================
-   MOBILE
+   TABLET
 ========================= */
 
 @media (max-width: 768px){
+
+  .sb-loader-box{
+    width: 90%;
+
+    padding: 42px 24px;
+
+    border-radius: 28px;
+  }
 
   .sb-loader-logo{
     letter-spacing: -1px;
   }
 
   .sb-loader-line{
-    width: 190px;
-    height: 7px;
+    width: 210px;
+    height: 8px;
   }
 
   .sb-loader-wrapper p{
     font-size: 14px;
+
+    line-height: 1.7;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px){
+
+  .sb-loader-box{
+    width: calc(100% - 30px);
+    padding: 38px 20px;
+    border-radius: 24px;
+  }
+
+  .sb-loader-logo{
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .sb-loader-line{
+    width: 180px;
+    height: 7px;
+  }
+
+  .sb-loader-wrapper p{
+    font-size: 13px;
+  }
+
+  .sb-loader-dots{
+    gap: 6px;
+  }
+
+  .sb-loader-dots span{
+    width: 8px;
+    height: 8px;
   }
 }
