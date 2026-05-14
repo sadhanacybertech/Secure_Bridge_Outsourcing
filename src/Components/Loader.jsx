@@ -17,7 +17,7 @@ function Loader() {
         </span>
 
         <span className="sb-loader-dark">
-          Bridge
+          Bridge Outsourcing
         </span>
 
       </div>

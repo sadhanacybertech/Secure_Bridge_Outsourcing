@@ -56,7 +56,7 @@ const Header = () => {
                     <Nav className="ms-auto align-items-lg-center navbar-menu">
 
                         <Nav.Link
-                           
+                            as={Link}
                             to="/"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}
@@ -88,7 +88,7 @@ const Header = () => {
 
                         <Nav.Link
                             as={HashLink}
-                            smooth="true"   
+                            smooth="true"
                             to="/#about-us"
                             className="nav-link-custom"
                             onClick={() => setExpanded(false)}

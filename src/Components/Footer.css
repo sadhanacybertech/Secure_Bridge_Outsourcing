@@ -70,20 +70,15 @@
 .footer-logo {
   display: flex;
   align-items: center;
-
   gap: 6px;
-
   margin-bottom: 18px;
-
   flex-wrap: wrap;
 }
 
 .footer-logo-blue,
 .footer-logo-dark {
-  font-size: 34px;
-
+  font-size: 25px;
   font-weight: 800;
-
   letter-spacing: -1px;
 
   line-height: 1.1;

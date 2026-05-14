@@ -36,16 +36,14 @@ const Footer = () => {
               </span>
 
               <span className="footer-logo-dark">
-                Bridge
+                Bridge Outsourcing
               </span>
 
             </div>
 
             <p className="footer-desc">
-              We provide reliable outsourcing solutions with
-              transparent processes, skilled professionals,
-              and scalable business support to help your
-              company grow faster and smarter.
+              Secure Bridge Outsourcing Pvt. Ltd. provides high-intent, TCPA-compliant lead generation and outsourcing 
+              solutions with quality-driven support designed to help businesses grow faster and smarter.
             </p>
 
             {/* SOCIAL ICONS */}
@@ -141,9 +139,8 @@ const Footer = () => {
             <ul className="footer-links">
 
               <li>
-                <Link as={HashLink}
-                  smooth="true"
-                  to="/#home" onClick={() => setExpanded(false)}>
+                <Link as={Link}
+                  to="/" onClick={() => setExpanded(false)}>
                   <IoIosArrowForward />
                   Home
                 </Link>

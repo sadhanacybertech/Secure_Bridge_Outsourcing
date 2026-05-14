@@ -2,21 +2,21 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaBriefcase, FaBroadcastTower, FaBullhorn, FaBullseye, FaChartBar, FaChartLine, FaCheckCircle, FaClipboardCheck, FaClock, FaEnvelope, FaHandshake, FaHeadset, FaHeartbeat, FaHospital, FaMapMarkerAlt, FaNetworkWired, FaPaperPlane, FaPhoneAlt, FaPhoneVolume, FaRocket, FaSatelliteDish, FaSearch, FaShareSquare, FaShieldAlt, FaStar, FaUserFriends, FaUsers, FaUserShield } from "react-icons/fa";
 import "./Home.css";
 import { FiChevronDown } from "react-icons/fi";
-import heroImg from "./images/lead.jpeg";
+import heroImg from "./images/lead.webp";
 import { IoDiscSharp, IoStarHalf } from "react-icons/io5";
 import { HashLink } from "react-router-hash-link";
 import { IoIosDisc, IoMdCheckmarkCircleOutline } from "react-icons/io";
-import ppcImg from "./images/ppc.jpeg";
+import ppcImg from "./images/ppc.webp";
 import aboutImg from "./images/About.jpeg";
 import { PiPhoneCallFill } from "react-icons/pi";
 
-import medicare from "./images/Medicare-Campaigns.avif";
-import aca from "./images/aca.avif";
-import finalExpenseImg from "./images/Final-Expense.avif";
-import autoInsuranceImg from "./images/auto-insurance.avif";
-import ssdiImg from "./images/Social-Security.avif";
-import debtSettlementImg from "./images/Debt-Settlement.avif";
-import educationImg from "./images/education.avif";
+import medicare from "./images/Medicare-Campaigns.webp";
+import aca from "./images/aca.webp";
+import finalExpenseImg from "./images/Final-Expense.webp";
+import autoInsuranceImg from "./images/auto-insurance.webp";
+import ssdiImg from "./images/Social-Security.webp";
+import debtSettlementImg from "./images/Debt-Settlement.webp";
+import educationImg from "./images/education.webp";
 const Home = () => {
 
 
@@ -236,8 +236,84 @@ const Home = () => {
     },
   ];
 
+
+
+
+
+  // =========================
+  // CONTACT FORM SUBMIT
+  // =========================
+
+  const [result, setResult] = useState("");
+
+  const [loading, setLoading] = useState(false);
+
+  const onSubmit = async (event) => {
+
+    event.preventDefault();
+
+    setLoading(true);
+
+    setResult("");
+
+    const formData = new FormData(event.target);
+
+    /* W3FORMS ACCESS KEY */
+
+    formData.append(
+      "access_key",
+      "9356b707-da26-42a7-a4b6-9ee17b15741a"
+    );
+
+    try {
+
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+
+      setLoading(false);
+
+      if (data.success) {
+
+        setResult("success");
+
+        event.target.reset();
+
+      } else {
+
+        console.log("Error", data);
+
+        setResult("error");
+      }
+
+    } catch (error) {
+
+      console.log(error);
+
+      setLoading(false);
+
+      setResult("error");
+    }
+
+    /* AUTO REMOVE MESSAGE */
+
+    setTimeout(() => {
+
+      setResult("");
+
+    }, 4000);
+  };
+
   return (
     <>
+
+      {/* hero secion code here  */}
       <section className="sb-hero" id="home">
         <div className="sb-hero-container">
           {/* LEFT CONTENT */}
@@ -303,6 +379,11 @@ const Home = () => {
               <img
                 src={heroImg}
                 alt="Secure Bridge Outsourcing"
+                width="724"
+                height="400"
+                loading="eager"
+                // fetchpriority="high"
+                decoding="async"
               />
 
               <div className="sb-floating-card card-1">
@@ -475,10 +556,8 @@ const Home = () => {
 
       </section>
 
-      {/* =========================
-    SPECIALIZED SERVICES
-========================= */}
 
+      {/* SPECIALIZED SERVICES */}
       <section
         className="sb-services-section"
         id="verticals"
@@ -601,9 +680,8 @@ const Home = () => {
 
 
 
-      {/* =========================
-    ACA SPECIALIZATION SECTION
-========================= */}
+      {/* ACA SPECIALIZATION SECTION */}
+
 
       <section className="aca-section">
 
@@ -741,9 +819,9 @@ const Home = () => {
 
 
 
-      {/* =========================
-    ACA SECTION
-========================= */}
+
+      {/* ACA SECTION */}
+
 
       <section className="aca-health-section">
 
@@ -861,9 +939,9 @@ const Home = () => {
 
 
 
-      {/* =========================
-    ADVANCED SERVICES
-========================= */}
+
+      {/* ADVANCED SERVICES */}
+
 
       <section className="advanced-services-section">
 
@@ -1198,7 +1276,7 @@ const Home = () => {
 
 
 
-
+      {/* contact us section start here  */}
       <section className="sb-contact-section" id="contact-form">
         <div className="container">
 
@@ -1238,59 +1316,100 @@ const Home = () => {
                   </p>
                 </div>
 
-                <form>
+                <form onSubmit={onSubmit}>
 
                   <div className="row g-4">
 
+                    {/* FIRST NAME */}
+
                     <div className="col-md-6">
-                      <label>First Name</label>
+
+                      <label>
+                        First Name
+                      </label>
 
                       <input
                         type="text"
+                        name="first_name"
                         className="form-control"
                         placeholder="Enter your first name"
+                        required
                       />
+
                     </div>
 
+                    {/* LAST NAME */}
+
                     <div className="col-md-6">
-                      <label>Last Name</label>
+
+                      <label>
+                        Last Name
+                      </label>
 
                       <input
                         type="text"
+                        name="last_name"
                         className="form-control"
                         placeholder="Enter your last name"
+                        required
                       />
+
                     </div>
 
+                    {/* EMAIL */}
+
                     <div className="col-md-6">
-                      <label>Email Address</label>
+
+                      <label>
+                        Email Address
+                      </label>
 
                       <input
                         type="email"
+                        name="email"
                         className="form-control"
                         placeholder="Enter your email address"
+                        required
                       />
+
                     </div>
 
+                    {/* PHONE */}
+
                     <div className="col-md-6">
-                      <label>Phone Number</label>
+
+                      <label>
+                        Phone Number
+                      </label>
 
                       <input
                         type="text"
+                        name="phone"
                         className="form-control"
                         placeholder="Enter your phone number"
+                        required
                       />
+
                     </div>
 
+                    {/* BUSINESS */}
+
                     <div className="col-md-6">
-                      <label>Business Type</label>
+
+                      <label>
+                        Business Type
+                      </label>
 
                       <input
                         type="text"
+                        name="business_type"
                         className="form-control"
                         placeholder="Enter your business type"
                       />
+
                     </div>
+
+                    {/* SERVICE */}
 
                     <div className="col-md-6">
 
@@ -1300,9 +1419,12 @@ const Home = () => {
 
                       <select
                         id="serviceSelect"
+                        name="service"
                         className="form-select"
+                        required
                       >
-                        <option>
+
+                        <option value="">
                           Choose Service
                         </option>
 
@@ -1326,27 +1448,91 @@ const Home = () => {
 
                     </div>
 
+                    {/* MESSAGE */}
+
                     <div className="col-12">
-                      <label>Message</label>
+
+                      <label>
+                        Message
+                      </label>
 
                       <textarea
                         rows="5"
+                        name="message"
                         className="form-control"
                         placeholder="Tell us about your project or business requirements..."
+                        required
                       ></textarea>
+
                     </div>
+
+                    {/* BUTTON */}
 
                     <div className="col-12">
+
                       <button
                         type="submit"
-                        className="sb-contact-btn"
+                        className={`sb-contact-btn ${loading ? "btn-loading" : ""
+                          }`}
+                        disabled={loading}
                       >
-                        Send Message
-                        <FaPaperPlane />
+
+                        {loading ? (
+                          <>
+                            <span className="btn-spinner"></span>
+
+                            Sending...
+                          </>
+                        ) : (
+                          <>
+                            Send Message
+
+                            <FaPaperPlane />
+                          </>
+                        )}
+
                       </button>
+
                     </div>
 
+                    {/* RESULT */}
+
+                    {result === "success" && (
+
+                      <div className="col-12">
+
+                        <div className="form-alert success-alert">
+
+                          <FaCheckCircle />
+
+                          Message sent successfully!
+
+                        </div>
+
+                      </div>
+
+                    )}
+
+                    {result === "error" && (
+
+                      <div className="col-12">
+
+                        <div className="form-alert error-alert">
+
+                          <FaTimesCircle />
+
+                          Something went wrong. Please try again.
+
+                        </div>
+
+                      </div>
+
+                    )}
+
+
+
                   </div>
+
                 </form>
               </div>
             </div>
@@ -1433,17 +1619,17 @@ const Home = () => {
                   <strong className="fw-bold">Why Choose Secure Bridge?</strong>
 
                   <div className="sb-why-item">
-                    <FaCheckCircle />
+                    <IoMdCheckmarkCircleOutline />
                     <span>500+ Successful Business Clients</span>
                   </div>
 
                   <div className="sb-why-item">
-                    <FaCheckCircle />
+                    <IoMdCheckmarkCircleOutline />
                     <span>24/7 Dedicated Support Team</span>
                   </div>
 
                   <div className="sb-why-item">
-                    <FaCheckCircle />
+                    <IoMdCheckmarkCircleOutline />
                     <span>Secure & Scalable Outsourcing Solutions</span>
                   </div>
 
@@ -1456,6 +1642,9 @@ const Home = () => {
         </div>
       </section>
 
+
+
+      {/* Faqs section start here  */}
 
       <section className="faq-section" id="faq">
         <div className="container">
