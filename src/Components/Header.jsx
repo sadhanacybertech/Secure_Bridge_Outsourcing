@@ -37,7 +37,7 @@ const Header = () => {
                         width="220"
                         height="52"
                         loading="eager"
-                        fetchpriority="high"
+                        // fetchpriority="high"
                         decoding="async"
                     />
 

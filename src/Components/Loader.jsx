@@ -30,7 +30,7 @@ function Loader() {
             width="220"
             height="70"
             loading="eager"
-            fetchpriority="high"
+            // fetchpriority="high"
             decoding="async"
           />
 
