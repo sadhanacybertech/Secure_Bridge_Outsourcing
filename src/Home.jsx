@@ -679,10 +679,7 @@ const Home = () => {
       </section>
 
 
-
       {/* ACA SPECIALIZATION SECTION */}
-
-
       <section className="aca-section">
 
         <div className="container">
@@ -821,8 +818,6 @@ const Home = () => {
 
 
       {/* ACA SECTION */}
-
-
       <section className="aca-health-section">
 
         <div className="container">
@@ -938,10 +933,7 @@ const Home = () => {
 
 
 
-
-
       {/* ADVANCED SERVICES */}
-
 
       <section className="advanced-services-section">
 
@@ -1177,8 +1169,6 @@ const Home = () => {
         </div>
 
       </section>
-
-
 
 
       {/* ABOUT COMPANY */}
